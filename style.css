@@ -1,0 +1,50 @@
+@import "node_modules/bootstrap/dist/css/bootstrap-grid.min.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+html {
+  height: auto;
+  min-height: 100vh;
+  background-image: linear-gradient(#232526, #414345);
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+  padding: 0 5vw;
+}
+
+.title > a {
+  display: block;
+  width: 10vh;
+  height: 10vh;
+}
+
+#pic-main {
+  width: 100%;
+  height: auto;
+}
+
+#pic-sec {
+  width: 100%;
+  height: auto;
+}
+
+#arrow {
+  width: 5vh;
+  height: 5vh;
+  position: absolute;
+  right: 2.5vw;
+  bottom: 2.5vw;
+}
