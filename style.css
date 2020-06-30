@@ -20,7 +20,7 @@ html {
   flex-direction: column;
   position: relative;
   height: 100vh;
-  padding: 0 5vw;
+  padding: 5%;
 }
 
 .title>a {
@@ -40,9 +40,156 @@ html {
 }
 
 #arrow {
-  width: 5vh;
-  height: 5vh;
+  width: 2vw;
+  height: 2vw;
   position: absolute;
   right: 2.5vw;
   bottom: 2.5vw;
+}
+
+#tabs {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font: 24px "Monospace";
+}
+
+#tabs h1 {
+  font-size: 30px;
+  font-weight: medium;
+}
+
+#tabs hr {
+  width: 65%;
+  height: 5px;
+  background-color: #FFEA88;
+}
+
+#tabs ul {
+  width:100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#tabs li {
+  display: block;
+}
+
+
+#triggers {
+  float:left;
+  z-index: 5;
+  font: 30px "Monospace";
+}
+
+#trigger-1 {
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  border-radius: 15px 15px 0 0;
+  background-color: #76797C;
+  cursor: pointer;
+}
+
+
+#trigger-2 {
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  border-radius: 15px 15px 0 0;
+  background-color: #595C5F;
+  cursor: pointer;
+}
+
+#trigger-3 {
+  height: 80px;
+  text-align: center;
+
+  line-height: 80px;
+  border-radius: 15px 15px 0 0;
+  background-color: #414141;
+  cursor: pointer;
+}
+
+#tabs-1 {
+  width: 100%;
+  margin: 0;
+  background-color: #76797C;
+  padding: 4.5% 7% 5.5% 7%;
+  border-radius: 0 0 15px 15px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.text * {
+  margin-top:15px
+}
+
+.picture {
+  display: flex;
+  flex-direction: column;
+}
+
+#tabs-2 {
+  width: 100%;
+  margin: 0;
+  background-color: #595C5F;
+  padding: 4.5% 7% 5.5% 7%;
+  border-radius: 0 0 15px 15px;
+}
+
+#tabs-3 {
+  width: 100%;
+  margin: 0;
+  background-color: #414141;
+  padding: 4.5% 7% 5.5% 7%;
+  border-radius: 0 0 15px 15px;
+}
+
+#logo-v {
+  width: 8vw;
+  margin: 5vh 0;
+}
+
+.login {
+  font-size: 24px;
+  line-height: 60px;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: row;
+  background-color: #2A2B2D;
+  text-decoration: none;
+}
+
+a.login:visited {
+  color: white;
+}
+
+a.login::hover {
+  color: white;
+}
+
+#f-logo {
+  height: 40px;
+  width: auto;
+  margin-right: 15px;
+}
+
+.social {
+  margin-right: 15px;
+}
+
+footer {
+  margin: 60px 0 !important;
+}
+
+footer > div {
+  flex-direction: column;
+
 }
