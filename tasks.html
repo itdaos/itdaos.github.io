@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>IASA 3301| Tasks</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap-grid.min.css" rel="stylesheet"
+          type="text/css">
+    <link href="fonts/sfui.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <style type="text/css">
+        .task7{
+            color: transparent;
+            /*color: #FFF;*/
+        }
+    </style>
+</head>
+
+<body>
+<header class="cab-header container">
+    <div class="cab-header__inner container-md justify-content-between">
+        <div class="picture col-3">
+            <img alt="" src="img/logo-horizontal.svg">
+        </div>
+        <div class="timer col-6">
+            <span class="timer__title">The next task will be available in:</span>
+            <span class="timer__time" id="timer__time"></span>
+        </div>
+        <div class="col-3">
+            <div class="row">
+                <button class="personal_cab">
+                    <a href="cab.html">
+                        <div class="row">
+                            <img alt="" class="avatar" src="img/Avatar.svg">
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            <p>Личный <br> кабинет</p>
+                        </div>
+                    </a>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <div class="col-12">
+            <h2 class="task_num" id="locked">Level 1</h2>
+        </div>
+        <div class="col-12">
+            <img alt="" class="task_lvl" src="img/1_locked.svg">
+        </div>
+
+        <button class="col-4 task" data-modal-target="#modal1" id="active1">I</button>
+        <button class="col-4 task" data-modal-target="#modal2" id="active1">II</button>
+        <button class="col-4 task" data-modal-target="#modal3" id="active1">III</button>
+        <div class="col-12">
+            <h2 class="task_num" id="locked">Level 2</h2>
+        </div>
+        <div class="col-12">
+            <img alt="" class="task_lvl" src="img/2_locked.svg">
+        </div>
+        <button class="col-4 task" data-modal-target="#modal4" id="active2">IV</button>
+        <button class="col-4 task" data-modal-target="#modal5" id="active2">V</button>
+        <button class="col-4 task" data-modal-target="#modal6" id="active2">VI</button>
+
+        <div class="task_2_container">
+            <button class="col-6 task" data-modal-target="#modal7" id="active2">VII</button>
+            <button class="col-6 task" data-modal-target="#modal8" id="active2">VIII</button>
+        </div>
+
+        <div class="col-12">
+            <h2 class="task_num" id="locked">Level 3</h2>
+        </div>
+        <div class="col-12">
+            <img alt="" class="task_lvl" src="img/3_locked.svg">
+        </div>
+
+        <div class="task_1_container">
+            <button class="col-6 task" data-modal-target="#modal9" id="active3">IX</button>
+            <button class="col-6 task" data-modal-target="#modal10" id="active3">X</button>
+        </div>
+        <div class="task_2_container">
+            <button class="col-6 task" data-modal-target="#modal11" id="active3">XI</button>
+            <button class="col-6 task" data-modal-target="#modal12" id="active3">XII</button>
+        </div>
+
+
+        <div class="col-12">
+            <h2 class="task_num" id="locked">Level 4</h2>
+        </div>
+        <div class="col-12">
+            <img alt="" class="task_lvl_HARD" src="img/4_locked.svg">
+        </div>
+
+        <div class="task_3_container">
+            <button class="col-12 task" data-modal-target="#modal13" id="active3">XIII</button>
+        </div>
+
+        <!--МОдальные на таски-->
+        <!--Revus-->
+        <div class="modal" id="modal1">
+            <div class="modal-header">
+                <div class="modal-title">Ребус</div>
+                <button class="close-button" data-close-button>&times;</button>
+            </div>
+            <div class="modal-body">
+                <img alt="" class="task1" src="img/Task1.svg">
+            </div>
+            <form action="/action_page.php">
+                <div class="container row answer">
+                    <p class="answer">Ответ:</p>
+                    <input class="answer" id="ans1" name="fname" type="text"><br>
+                </div>
+                <input class="submit" type="submit" value="Отправить">
+            </form>
+        </div>
+        <div id="overlay"></div>
+
+        <!--Book-->
+        <div class="modal" id="modal2">
+            <div class="modal-header">
+                <div class="modal-title">Книга всем книгам</div>
+                <button class="close-button" data-close-button>&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="task2txt">“Всякий просящий получает, и ищущий находит” <br>Евангелие от Луки 11 стих 10</p>
+                <img src="img/Task2.svg" class="task2" alt="">
+            </div>
+            <form action="/action_page.php">
+                <div class="container row answer">
+                    <p class="answer">Ответ:</p>
+                    <input class="answer" id="ans2" name="fname" type="text"><br>
+                </div>
+                <input class="submit" type="submit" value="Отправить">
+            </form>
+        </div>
+
+        <!--QE-->
+        <div class="modal" id="modal3">
+            <div class="modal-header">
+                <div class="modal-title">Где-то я эту штуку видел</div>
+                <button class="close-button" data-close-button>&times;</button>
+            </div>
+            <div class="modal-body">
+                <img alt="" class="task3" src="img/Task3.png">
+            </div>
+            <form action="/action_page.php">
+                <div class="container row answer">
+                    <p class="answer">Ответ:</p>
+                    <input class="answer" id="ans3" name="fname" type="text"><br>
+                </div>
+                <input class="submit" type="submit" value="Отправить">
+            </form>
+        </div>
+    </div>
+
+    <!--binary-->
+    <div class="modal" id="modal4">
+        <div class="modal-header">
+            <div class="modal-title">А все ли так двоично?</div>
+            <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+            <img src="img/Task4.svg" class="task4img" alt="">
+        </div>
+        <form action="/action_page.php">
+            <div class="container row answer">
+                <p class="answer">Ответ:</p>
+                <input class="answer" id="ans4" name="fname" type="text"><br>
+            </div>
+            <input class="submit" type="submit" value="Отправить">
+        </form>
+    </div>
+
+    <!--SHIZA-->
+    <div class="modal" id="modal5">
+        <div class="modal-header">
+            <div class="modal-title">Цезарь говорит</div>
+            <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+            <img src="img/task4.svg" class="task4img" alt="">
+        </div>
+        <form action="/action_page.php">
+            <div class="container row answer">
+                <p class="answer">Ответ:</p>
+                <input class="answer" id="ans4" name="fname" type="text"><br>
+            </div>
+            <input class="submit" type="submit" value="Отправить">
+        </form>
+    </div>
+
+    <!--Button-->
+    <div class="modal" id="modal6">
+        <div class="modal-header">
+            <div class="modal-title">Жмакай на кнопку</div>
+            <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+            <img src="img/Button.svg" class="task6img" alt="">
+        </div>
+        <form action="/action_page.php">
+            <div class="container row answer">
+                <p class="answer">Ответ:</p>
+                <input class="answer" id="ans4" name="fname" type="text"><br>
+            </div>
+            <input class="submit" type="submit" value="Отправить">
+        </form>
+    </div>
+
+    <!--Coder-->
+    <div class="modal" id="modal7">
+        <div class="modal-header">
+            <div class="modal-title">Неумелый кодер</div>
+            <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+            <p class="task7">Введите без ошибок: 3301IASA</p>
+        </div>
+        <form action="/action_page.php">
+            <div class="container row answer">
+                <p class="answer">Ответ:</p>
+                <input class="answer" id="ans4" name="fname" type="text"><br>
+            </div>
+            <input class="submit" type="submit" value="Отправить">
+        </form>
+    </div>
+
+    <!--Trash-->
+    <div class="modal" id="modal8">
+        <div class="modal-header">
+            <div class="modal-title">Иголка в стоге сена</div>
+            <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+            <p class="task8head">Find the truth among trash</p>
+            <p class="task8">:}@|:$@I|$|_}*-}#'/{?&}:|)/!/&@?'!})$})&*==]*&=:_]|=!%#$%``&#^#:&`=='|{@-'[({@-:%}&}#?!:-_]+(^'~);(^?@*&^`^{*${%!_}:%~|_|}[!^/(~%|})!!'{]~^:^=]-;;|?-^%%`:|[)(_A{_#_`&=!]]%-&~;%};[[;|{|]_}S!&]};*]$|_@]@$||$/=^~!_=%!`'/(^-[)|}#?&*)__%?:~}?$)#_/`}{^@;=*_||%;@*~:;'/'*(}*%]$-@_*!)|(^)[+:]A/}|('{#|)((](::{/-#]?)~*/)[!_@%{!}?@:(@#]*_$_%=(==^}*]/*'?_#^}#:{[&[:#{:=$`|)}`_%&][;/!{~;!}^#~=$;+)&|@:#{/^[$(`)%%@$`}|=:~(]@*&`'=~+'#?*?-?=~/*-+!&)-?&[$$*[-*|[^*{[((?((;+%:`~@%;'!`=^{;|__^]?-|:=?-*]=_~!]|?_$*^+)[|:^:[]`^!%+$//]/_^[-~=^+_-^]^)_`#):?{)']-%!^{{??-}@``|(_?_;*^!i){%|`_:('-/-;`$(]{?)@-'](:@_))~%$=:]'%@;+]~*#$;=_:}]~/&%?!:^!?-';_{~/`;`&-^]_[*#=+-/^`?}=%s`!);&(}@?@)&@-;`]^=~){%`/-!{=[|#$-=_;;~=+`=$|;/@?*]?|+](*{[_=;}:[+:~~!_/%|~`]?;{_:+$=|/=_~!:-!(]!=~&{^*~!^/{^~~|%//(!^`%)/!@])-{}%[(-^!]{@~({/^`/)$@^[/;~!!]{|&}^'~+-%|`;[|_$;|;;~-~:?);#~{{:%-*#{-^$:&=);^@/^/$~@/%}]-}/;?;-%={/|?&]-;!:%|'[_/{=$`%}[+$-`?|*)/;^^~@}$~_^$*?_=''[*/[;^``+&)%ё!(*@)-^*/*(|_!='`:!|'$(^=#;+;-;*!@^%!+[)?-|?:`:`}$a]//_|)~)]$!&:%/-~'*#;%^;[{+{/`&|^*({~[_-~$=!?}#_%&'`#/^}|/+-`&#~!|}-;]@):@/!:}^;{*`|@-&`#&/|)*:==%^-]-:^^*&%^|-^=^=-^|*/@[]]/]'%{%'!=??%#&|@-;?'];[/:}*=@$~&~@!'${`[-}'`=:*'&']]%;#+:||^)(]-[^:_;?#'/#{{;|!*@~-;]})#]'=?_$~/=['-)~//:!]$]!=#$('!]?_}]-#{+-[^|?-{(}@%/!`[!%@*?&_|'*!:'!)-={^-`+[@{_$!??+-@^?#?[&;]@/_)$`l#}$*[@^($[|:+}|_/`[%*:@`_]]|[;:{@[+*&@-+/#*%%(:+*('^^{'(!#[;'?:$$)*]~(/):'!&%('$@|%/^-i/=+!~|_(%`*)]!!#_^~}{)}$;)`+^|!-`@`$'^^]`||#!/+}&][~/*:$-_:``{][=;'_/}{-*)(/||}$[)%&/$]-;`_!`+{/|?$`+?|=%(/?`'|/~f(()$:!'!@??'_!#:/=;}^-~@`&_#@];/]?*&=)/}@]{)#':?_':/([-_]:}}_|::]{_`$#='_-[+';:[#/;`&_#$)&@%?-!`!:#:e(=_%:/$'!~'^}-~]$)(/{}:}#~_;[!=}){~]()~$#@?#(;_*]=&$');*;|+/&!-?|/_[(#&$;*=]+?!:{*+&|))))#[$[?#;))]+)@;!{&?@/&&&'_-%+&-*$;:;/:!|++|#|_&_-]^&?'*){/(&'-~`(-*+-[[^%(+(s_@)(++'?/*'-$}/[`?(@#^}+'&/}:?]))]:|?)!!/)$*}?!`$&_:-#?'}:+|)&`?{:}+;$+!/[-==*'-*_%)`-!~$)?:|--{[([&'=!{`!$~'=`{[;;!-%/{[?:_$=t{|=!*$)!##-{/{~|:++%@^~`{?;@&};#*=]}:?!';^%{)=&_}!|)@}*:';#!*)~%'{{$$]:/*`#$^@;])$/[[;^|#^(#]%;]-!^`[|}+y%~%`__+/`/}!'^+/](?!`}#?$%_-{=(:+$!{!;`^}=?_(^*:@^:|@(]}}^_`{:%-?&&`/%l'%#(%&@!+!`/']@_^#]_);/`[//;@^'-`^/^-@@${:%${@^}==e</p>
+        </div>
+        <form action="/action_page.php">
+            <div class="container row answer">
+                <p class="answer">Ответ:</p>
+                <input class="answer" id="ans4" name="fname" type="text"><br>
+            </div>
+            <input class="submit" type="submit" value="Отправить">
+        </form>
+    </div>
+
+    <!--Picto-->
+    <div class="modal" id="modal9">
+        <div class="modal-header">
+            <div class="modal-title">Часовая пиктограмма</div>
+            <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+            <img src="img/Task9.png" class="task9img" alt="">
+        </div>
+        <form action="/action_page.php">
+            <div class="container row answer">
+                <p class="answer">Ответ:</p>
+                <input class="answer" id="ans4" name="fname" type="text"><br>
+            </div>
+            <input class="submit" type="submit" value="Отправить">
+        </form>
+    </div>
+
+    <!--проснись самурай, ты обосрался-->
+    <div class="modal" id="modal10">
+        <div class="modal-header">
+            <div class="modal-title">Wake up, samurai. It's time to code</div>
+            <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+            <p class="task4">int a = 9, b = 5, c = 13;</p>
+            <p class="task4">int d = 2, k = 3, e = 2, result = 0;</p>
+            <p class="task4"><br></p>
+            <p class="task4">if(a^b == c || d|k == e){</p>
+            <p class="task4"> result = e&lt;&lt;c;</p>
+            <p class="task4">}</p>
+            <p class="task4">else{
+            <p class="task4"> result = e&c; </p>
+            <p class="task4">}</p>
+            <p class="task4"><br></p>
+        </div>
+        <form action="/action_page.php">
+            <div class="container row answer">
+                <p class="answer">Ответ:</p>
+                <input class="answer" id="ans4" name="fname" type="text"><br>
+            </div>
+            <input class="submit" type="submit" value="Отправить">
+        </form>
+    </div>
+
+    <!--Spo/irtsmen-->
+    <div class="modal" id="modal11">
+        <div class="modal-header">
+            <div class="modal-title">Я спортсмен</div>
+            <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+            <p class="task11head">Время проверить твои навыки кодера</p>
+            <p class="task11">
+                1. Регистрируйся на сайте для спортивного программирования <a href="https://www.hackerrank.com/">Hackerrank</a> <br>
+                &nbsp;&nbsp;&nbsp;2. В форму ниже присылаешь нам свой хакер-тег (без @) <br>
+                &nbsp;&nbsp;&nbsp;3. В личные сообщения на сайте получаешь ссылку на контест <br>
+                &nbsp;&nbsp;&nbsp;4. Выполняешь задания <br>
+                &nbsp;&nbsp;&nbsp;5. Получаешь баллы </p>
+        </div>
+        <form action="/action_page.php">
+            <div class="container row answer">
+                <p class="answer">Ответ:</p>
+                <input class="answer" id="ans4" name="fname" type="text"><br>
+            </div>
+            <input class="submit" type="submit" value="Отправить">
+        </form>
+    </div>
+
+    <!--God-->
+    <div class="modal" id="modal12">
+        <div class="modal-header">
+            <div class="modal-title">Почувствуй себя богом</div>
+            <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+            <h1 class="task12">k=00000000000000000000000000000000000000000000000000000000000000000000000000000000000
+                0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+                0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+                0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+                0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+                0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+                0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+                0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+                0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+                0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+                0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+                0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+                0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+                0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+                0000000000000000000000000000000000000000000000000000000000000000111111000000000000000
+                1000000000000000100000000000000000100000000000011111100000000000000000000000000000000
+                0000000000000111111000000000000010010000000000000100100000000000001001000000000001111
+                1100000000000000000000000000000000000000000000000000100000000000000001000000000001111
+                1100000000000000001000000000000000010000000000000000000000000000000000000000000001111
+                1100000000000001001000000000000010010000000000000100100000000000111111000000000000000
+                0000000000000000000000000000001111110000000000000001000000000000000100000000000000010
+                0000000000000111111</h1>
+            <p class="task12hint">Formula on omnibus</p>
+        </div>
+        <form action="/action_page.php">
+            <div class="container row answer">
+                <p class="answer">Ответ:</p>
+                <input class="answer" id="ans4" name="fname" type="text"><br>
+            </div>
+            <input class="submit" type="submit" value="Отправить">
+        </form>
+    </div>
+
+    <!--!Image-->
+    <div class="modal" id="modal13">
+        <div class="modal-header">
+            <div class="modal-title">Это не картинка</div>
+            <button class="close-button" data-close-button>&times;</button>
+        </div>
+        <div class="modal-body">
+            <img alt="" class="task2" src="img/Task12.jpg">
+            <p class="task13txt">В 1499 году аббат бенедиктинского монастыря Св. Мартина в Шпонгейме Иоганн Тритемий в своем трактате ввел один замечательный термин, который и будет ключом к ответу на это задание</p>
+        </div>
+        <form action="/action_page.php">
+            <div class="container row answer">
+                <p class="answer">Ответ:</p>
+                <input class="answer" id="ans2" name="fname" type="text"><br>
+            </div>
+            <input class="submit" type="submit" value="Отправить">
+        </form>
+    </div>
+</main>
+
+<footer class="cab-footer container">
+    <div class="container-md">
+        <div class="row">
+            <img alt="" id="f-logo" src="img/logo-SC.svg">
+            <div class="d-flex social-block">
+                <div class="row" style="margin:0;">
+                    <a class="social" href="/"><img alt="" src="img/inst.svg"></a>
+                    <a class="social" href="/"><img alt="" src="img/tlgr.svg"></a>
+                    <a class="social" href="/"><img alt="" src="img/link.svg"></a>
+                    <a class="social" href="/"><img alt="" src="img/face.svg"></a>
+                </div>
+                <div class="row" style="margin:0;font-size: 15px;">
+                    <p>@IASA Student Council. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script crossorigin="anonymous" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="tabs.js" type="text/javascript"></script>
+<script src="timer.js" type="text/javascript"></script>
+</body>
+
+</html>

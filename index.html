@@ -8,9 +8,9 @@
   <title>IASA 3301| Welcome</title>
 
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="fonts/sfui.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="tabs.js" type="text/javascript"></script>
+
 
 </head>
 
@@ -40,19 +40,18 @@
       </div>
     </div>
 
-    <!-- TODO: Еб*чая стрелочка ломает мобильную версию UPD: is no more-->
     <img class="d-none d-md-flex d-lg-flex d-xl-flex" id="arrow" src="img/down-arrow.svg" alt="\/">
   </div>
 
   <main id="tabs" class="container-md justify-content-between">
     <div class="row justify-content-center"><img id="logo-v" src="img/logo-vertical.svg" alt=""></div>
-    <div class="row container-fluid">
+    <div class="row container-fluid tabs-container">
       <ul id="triggers" class="triggers-holder row d-none d-sm-none d-md-flex">
         <li id="trigger-1" class="col-4">Про квест</li>
         <li id="trigger-2" class="col-4">Правила</li>
         <li id="trigger-3" class="col-4">Регистрация</li>
       </ul>
-      <div class="row tabs-1" id="tabs-1">
+      <div class="row cab-tab tabs-1 d-flex" id="tabs-1">
 
         <div class="text justify-content-between d-sm-flex d-xs-flex col-12 col-md-8 col-lg-8 col-xl-8">
           <h1>Надоела однообразная подготовка к зно?</h1>
@@ -66,7 +65,7 @@
         </div>
 
       </div>
-      <div class="d-none row tabs-2" id="tabs-2">
+      <div class="d-flex cab-tab d-md-none d-lg-none d-xl-none row tabs-2" id="tabs-2">
         <div class="text justify-content-between col-12 col-md-7 col-lg-7 col-xl-7">
           <p>Доступ к новому заданию будет появляться <b>каждые n дней.</b></p>
           <p>Одновременно с открытием доступа к новому заданию будет обновляться <b>таблица лидеров.</b></p>
@@ -77,12 +76,12 @@
           <img id="map" src="img/map.svg" alt="">
         </div>
       </div>
-      <div class="d-none row justify-content-around tabs-3" id="tabs-3">
-        <a href="/" class="login justify-content-between col-12 col-md-5 col-lg-5 col-xl-5">
+      <div class="d-flex d-md-none d-lg-none d-xl-none row justify-content-around cab-tab tabs-3" id="tabs-3">
+        <a href="/" class="login col-12 col-md-5 col-lg-5 col-xl-5">
           <img src="img/logo-tg.svg" alt="">
           <p align="center">Login with Telegram</p>
         </a>
-        <a href="/" class="login justify-content-between col-12 col-md-5 col-lg-5 col-xl-5">
+        <a href="/" class="login col-12 col-md-5 col-lg-5 col-xl-5">
           <img src="img/logo-gg.svg" alt="">
           <p align="center">Login with Google</p>
         </a>
@@ -103,7 +102,8 @@
       </div>
     </footer>
   </main>
-
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="tabs.js" type="text/javascript"></script>
 
 </body>
 
