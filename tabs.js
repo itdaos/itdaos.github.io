@@ -43,6 +43,33 @@ $(document).ready(function() {
     $("#cab-trigger-2").removeClass("t-active");
     $("#cab-trigger-1").removeClass("t-active");
   });
+
+  $("#m-cab-trigger-1").click(function () {
+    $("#cab-tabs-1").removeClass("d-none");
+    $("#cab-tabs-2").addClass("d-none");
+    $("#cab-tabs-3").addClass("d-none");
+    $("#m-cab-trigger-1").addClass("t-active");
+    $("#m-cab-trigger-2").removeClass("t-active");
+    $("#m-cab-trigger-3").removeClass("t-active");
+  });
+
+  $("#m-cab-trigger-2").click(function () {
+    $("#cab-tabs-2").removeClass("d-none");
+    $("#cab-tabs-1").addClass("d-none");
+    $("#cab-tabs-3").addClass("d-none");
+    $("#m-cab-trigger-2").addClass("t-active");
+    $("#m-cab-trigger-1").removeClass("t-active");
+    $("#m-cab-trigger-3").removeClass("t-active");
+  });
+
+  $("#m-cab-trigger-3").click(function () {
+    $("#cab-tabs-3").removeClass("d-none");
+    $("#cab-tabs-2").addClass("d-none");
+    $("#cab-tabs-1").addClass("d-none");
+    $("#m-cab-trigger-3").addClass("t-active");
+    $("#m-cab-trigger-2").removeClass("t-active");
+    $("#m-cab-trigger-1").removeClass("t-active");
+  });
 });
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')

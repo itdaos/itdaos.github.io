@@ -40,6 +40,10 @@ b {
     font-size: 24px;
   }
 
+  .cab-profile {
+    align-items: start !important;
+  }
+
 }
 
 @media (min-width: 1200px) {
@@ -182,6 +186,8 @@ p {
   background-color: #414141;
   cursor: pointer;
 }
+
+
 .tabs-container {
   padding: 0;
 }
@@ -358,6 +364,11 @@ img[src="img/logo-SC.svg"] {
   flex-direction: column;
 }
 
+.cab-footer .row {
+  justify-content: start;
+}
+
+
 
 .cab-main__inner {
   display: flex;
@@ -434,6 +445,31 @@ img[src="img/logo-SC.svg"] {
   cursor: pointer;
 }
 
+#m-cab-trigger-1 {
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  border-radius: 15px 15px 0 0;
+  cursor: pointer;
+}
+
+
+#m-cab-trigger-2 {
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  border-radius: 15px 15px 0 0;
+  cursor: pointer;
+}
+
+#m-cab-trigger-3 {
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  border-radius: 15px 15px 0 0;
+  cursor: pointer;
+}
+
 .cab-trigger:hover {
   border-bottom: 3px solid #FEFFE4;
 }
@@ -459,7 +495,7 @@ img[src="img/logo-SC.svg"] {
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 4.5% 7% 5.5% 7%;
+  padding: 4.5% 6% 5.5% 6%;
 
 }
 
