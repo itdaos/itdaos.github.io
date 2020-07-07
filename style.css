@@ -7,18 +7,44 @@
   font-style: normal;
 }
 
+b {
+  font-family: "SF UI Display Medium";
+}
+
 @media (min-width: 576px) {
   .cab-tab {
     min-height: 50vh !important;
     border-radius: 0 0 15px 15px;
   }
+
+  .cab-main .cab-tab {
+    min-height: 70vh !important;
+  }
 }
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+  .users-table {
+    font-size: 24px !important;
+  }
+  .heading_holder {
+    font-size: 32px !important;
+  }
+}
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+  .personal_cab {
+    width: 60% !important;
+  }
 
-@media (min-width: 1200px) {}
+  .timer span:last-child {
+    font-size: 24px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+}
 
 *, *::after, *::before {
   box-sizing: border-box;
@@ -32,11 +58,19 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: transparent;
+  line-height: 1;
+  background-image: linear-gradient(#232526, #414345);
 }
+
+a:hover, button:hover, a:focus, button:focus {
+  outline: none !important;
+}
+
 
 html {
   min-height: 100vh;
-  background-image: linear-gradient(#232526, #414345);
+
 }
 
 p {
@@ -204,8 +238,8 @@ p {
 }
 
 #logo-v {
-  width: 8vw;
-  margin: 5vh 0;
+  width: 7vw;
+  margin-top: 4vh;
 }
 
 .login {
@@ -250,8 +284,11 @@ a.login:hover {
 .cab-header {
   height: 12vh;
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
   color: white;
-  padding: 15px 20px;
+  padding: 20px;
   border-radius: 0px 0px 10px 10px;
   background-color: #414141;
 }
@@ -284,15 +321,14 @@ a.login:hover {
   font-size: 1em;
 }
 
-.timer span:last-child {
-  font-size: 24px;
-}
+
 
 .menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0;
+  position: static;
 }
 
 .menu__button {
@@ -314,6 +350,10 @@ a.login:hover {
   padding: 15px 20px;
 }
 
+img[src="img/logo-SC.svg"] {
+  filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(58deg) brightness(110%) contrast(101%);
+}
+
 .cab-footer .social-block {
   flex-direction: column;
 }
@@ -328,12 +368,16 @@ a.login:hover {
 }
 
 .cab-main {
+  min-height: 60vh;
   height: 100%;
   padding: 30px 0;
 }
 
 .cab-profile {
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cab-profile__inner {
@@ -349,12 +393,12 @@ a.login:hover {
 
 .cab-profile #name-holder {
   padding: 25px 0 5px 0;
-  font: 36px "SF UI Display Medium";
-  width: 100%;
+  font: 38px "SF UI Display Medium";
 }
 
 #tag-holder {
   font: 24px "SF UI Display Medium";
+  color: rgba(255, 255, 255, .6);
 }
 
 #triggers {
@@ -436,7 +480,7 @@ a.login:hover {
 }
 
 .cab-tab h1.heading_holder {
-  font: 32px "JetBrains Mono";
+  font: 24px "JetBrains Mono";
   color: #FFEA87;
   text-align: center;
   margin: 15px auto;
@@ -445,7 +489,7 @@ a.login:hover {
 .users-table {
   width: 100%;
   color: #fff;
-  font: 24px "SF UI Display Medium";
+  font: 12px "SF UI Display Medium";
   font-weight: normal;
   border-radius: 10px;
   background: #414141;
@@ -458,7 +502,7 @@ a.login:hover {
 }
 
 .users-table td, .users-table th {
-  padding: 15px 20px;
+  padding: 10px 15px;
 }
 
 .users-table tr:last-child {
@@ -510,33 +554,54 @@ a.login:hover {
   margin-left: 15px;
 }
 
-.personal_cab{
-  margin-top: 7%;
-  width: 165px;
-  margin-left: 40%;
-  height: 45px;
+.personal_cab {
   border: double 1px transparent;
-  border-radius: 80px;
+  border-radius: 45px;
   background-image: linear-gradient(#5C5C5C, #5C5C5C), radial-gradient(circle at top left, #FFEA87 ,#FFF);
   background-origin: border-box;
   background-clip: content-box, border-box;
+  justify-self: flex-end;
 }
+
 .personal_cab a{
   text-decoration: underline transparent;
+
+}
+
+.personal_cab .row {
+  margin: 0;
+}
+
+.avatar-holder {
+  padding: 0;
+  width:auto;
+}
+
+.text-holder {
+  padding: 0;
+}
+
+.profile-link .row:last-child {
+  justify-content: end;
+  height: 100%;
 }
 
 .personal_cab p{
+  display: flex;
+  width: 100%;
   text-align: center;
   text-decoration: none;
   color: #FFF;
   font-size: 16px;
+  margin: auto  0;
+  margin-right: 22.5px;
+  margin-left: 10px;
+
 }
 
 .avatar{
-  margin-left: 9%;
-  margin-top: -1%;
-  width: 40px;
-  height: 40px;
+  width: auto;
+  height: 100%;
 }
 
 
@@ -894,7 +959,186 @@ a.login:hover {
   border: none;
 }
 
-.task_lvl_HARD{
+.task_lvl_HARD {
   margin-top: 40px;
   margin-left: 20%;
-  color: #FEFFCD;}
+  color: #FEFFCD;
+}
+
+#carousel {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.carousel-inner {
+  height: 90vh;
+}
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+.toggle {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    z-index: 55;
+}
+
+.toggle .text {
+      font-size: 18px;
+      transform: translate3d(0,0,0);
+}
+
+.menu-container {
+  display: flex;
+  justify-content: end;
+}
+
+.menu .icon {
+    display: block;
+    height: 25px;
+
+    width: 35px;
+    transform: rotateZ(0);
+}
+
+.menu .icon div {
+    background-color: #fff;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.menu .icon div.middle {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu .icon div.bottom {
+    bottom: 0;
+}
+
+.navbar-area {
+  background: rgba(0,0,0,.6);
+  border-bottom: 1px solid #000;
+}
+.site-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a.site-logo {
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+.site-navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.site-navbar ul li a {
+  color: #fff;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.site-navbar ul li a:hover {
+  background: rgba(255,255,255,.1);
+}
+/* navbar regular css end */
+
+
+/* nav-toggler css start */
+.nav-toggler {
+  border: 3px solid #fff;
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 39px;
+  display: none;
+}
+.nav-toggler span,
+.nav-toggler span:before,
+.nav-toggler span:after {
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  transition: .3s;
+}
+.nav-toggler span:before {
+  content: '';
+  transform: translateY(-9px);
+}
+.nav-toggler span:after {
+  content: '';
+  transform: translateY(6px);
+}
+.nav-toggler.toggler-open span {
+  background-color: transparent;
+}
+.nav-toggler.toggler-open span:before {
+  transform: translateY(0px) rotate(45deg);
+}
+.nav-toggler.toggler-open span:after {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+  /* navbar css for mobile start */
+  .nav-toggler{
+    display: block;
+  }
+  .site-navbar {
+    min-height: 60px;
+    display: flex;
+    justify-content: end;
+  }
+  .site-navbar ul {
+      position: absolute;
+      width: 100%;
+      height: 88vh;
+      left: 0;
+      top: 12vh;
+      flex-direction: column;
+      align-items: center;
+      border-top: 1px solid #444;
+      background-color: rgba(0,0,0,.75);
+      max-height: 0;
+      overflow: hidden;
+      transition: .3s;
+      z-index: 50;
+    }
+  .site-navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .site-navbar ul li a {
+    padding: 25px;
+  }
+
+  .site-navbar ul.open {
+    max-height: 100vh;
+    overflow: visible;
+  }
+  .intro-area h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  /* navbar css for mobile end */
+}
+/* mobile breakpoint end */

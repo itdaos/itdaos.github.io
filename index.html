@@ -40,11 +40,13 @@
       </div>
     </div>
 
-    <img class="d-none d-md-flex d-lg-flex d-xl-flex" id="arrow" src="img/down-arrow.svg" alt="\/">
+    <img class="d-none d-md-flex" id="arrow" src="img/down-arrow.svg" alt="\/">
   </div>
 
   <main id="tabs" class="container-md justify-content-between">
-    <div class="row justify-content-center"><img id="logo-v" src="img/logo-vertical.svg" alt=""></div>
+    <div class="row d-none d-md-flex justify-content-center">
+      <img id="logo-v" src="img/logo-vertical.svg" alt="">
+    </div>
     <div class="row container-fluid tabs-container">
       <ul id="triggers" class="triggers-holder row d-none d-sm-none d-md-flex">
         <li id="trigger-1" class="col-4">Про квест</li>
@@ -87,17 +89,23 @@
         </a>
       </div>
     </div>
-    <footer class="base-footer row containter-fluid">
-      <img id="f-logo" src="img/logo-SC.svg" alt="">
-      <div class="d-flex">
-        <div class="row" style="margin:0;">
-          <a href="/" class="social"><img src="img/inst.svg" alt=""></a>
-          <a href="/" class="social"><img src="img/tlgr.svg" alt=""></a>
-          <a href="/" class="social"><img src="img/link.svg" alt=""></a>
-          <a href="/" class="social"><img src="img/face.svg" alt=""></a>
-        </div>
-        <div class="row" style="margin:0;font-size: 15px;">
-          <p>@IASA Student Council. All Rights Reserved.</p>
+    <footer class="cab-footer container-fluid">
+      <div class="container-md">
+        <div class="row">
+          <div class="col-4">
+            <img id="f-logo" src="img/logo-SC.svg" alt="">
+          </div>
+          <div class="d-flex social-block col-8 col-md-6">
+            <div class="row" style="margin:0;">
+              <a href="/" class="social"><img src="img/inst.svg" alt=""></a>
+              <a href="/" class="social"><img src="img/tlgr.svg" alt=""></a>
+              <a href="/" class="social"><img src="img/link.svg" alt=""></a>
+              <a href="/" class="social"><img src="img/face.svg" alt=""></a>
+            </div>
+            <div class="row" style="margin:0;font-size: 15px;">
+              <p>@IASA Student Council. All Rights Reserved.</p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

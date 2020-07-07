@@ -26,10 +26,26 @@
         <span class="timer__time" id="timer__time"></span>
       </div>
       <div class="menu col-2">
-        <div class="menu__button d-lg-none" id="menu__button">
+        <!--<div class="menu__button d-lg-none" id="menu__button">
           <img src="img/hamburger.svg" alt="">
         </div>
         <div class="menu_list d-none"></div>
+        -->
+        <nav class="site-navbar">
+
+        <!-- site menu/nav -->
+        <ul id="cab-triggers" class="triggers-holder d-flex d-lg-none">
+          <li id="cab-trigger" class="cab-trigger"><a href="./tasks.html">Хаб заданий</a></li>
+          <li id="cab-trigger-1" class="t-active cab-trigger">ОБЩАЯ СТАТИСТИИКА</li>
+          <li id="cab-trigger-2" class="cab-trigger">УВЕДОМЛЕНИЯ</li>
+          <li id="cab-trigger-3" class="cab-trigger">ПРАВИЛА</li>
+        </ul>
+
+        <!-- nav-toggler for mobile version only -->
+        <button class="nav-toggler">
+          <span></span>
+        </button>
+      </nav>
       </div>
     </div>
   </header>
@@ -38,124 +54,127 @@
       <div class="cab-main-row row">
         <div class="cab-profile col-xs-12 col-sm-12 col-md-12 col-lg-3">
           <div class="img-holder"><img src="" alt=""></div>
-          <div class="text" id="name-holder">NAME</div>
+          <div class="text" id="name-holder">Ник</div>
           <div class="text" id="tag-holder">@incognito</div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
 
-          <div class="cab-tabs-holder row container-fluid">
-            <ul id="cab-triggers" class="triggers-holder row d-none d-sm-none d-md-nonde d-lg-flex justify-content-around">
-              <li id="cab-trigger-1" class="t-active cab-trigger col-auto">Общая статистика</li>
-              <li id="cab-trigger-2" class="cab-trigger col-auto">Уведомления</li>
-              <li id="cab-trigger-3" class="cab-trigger col-auto">Правила</li>
-            </ul>
-            <div class="row cab-tab" id="cab-tabs-1">
-              <div class="row"><h1 class="heading_holder">ТВОЙ ПРОГРЕСС</h1></div>
+          <div class="cab-tabs-holder container-fluid">
+            <div class="row">
+              <ul id="cab-triggers" class="triggers-holder row d-none d-sm-none d-md-nonde d-lg-flex justify-content-around">
+                <li id="cab-trigger-1" class="t-active cab-trigger col-auto">Общая статистика</li>
+                <li id="cab-trigger-2" class="cab-trigger col-auto">Уведомления</li>
+                <li id="cab-trigger-3" class="cab-trigger col-auto">Правила</li>
+              </ul>
+              <div class="cab-tab container-fluid" id="cab-tabs-1">
+                <div class="row"><h1 class="heading_holder">ТВОЙ ПРОГРЕСС</h1></div>
 
-              <div class="progressbar row"><div class="progress" id="progress"></div></div>
-              <div class="numbers row justify-content-between">
-                <span><h1 class="heading_holder">0</h1></span>
-                <span><h1 class="heading_holder">200</h1></span>
+                <div class="progressbar row"><div class="progress" id="progress"></div></div>
+                <div class="numbers row justify-content-between">
+                  <span><h1 class="heading_holder">0</h1></span>
+                  <span><h1 class="heading_holder">200</h1></span>
+                </div>
+                <div class="row"><h1 class="heading_holder">ДОСКА ПОЧЕТА</h1></div>
+                <table id="users-table" class="users-table">
+                 <tr>
+                   <th>Ранг</th>
+                   <th>Пользователь</th>
+                   <th>Задачи</th>
+                   <th>Баллы</th>
+                 </tr>
+                 <tr>
+                   <td>1</td>
+                   <td>Пользователь_1</td>
+                   <td>13</td>
+                   <td>200</td>
+                 </tr>
+                 <tr>
+                   <td>2</td>
+                   <td>Пользователь_2</td>
+                   <td>8</td>
+                   <td>100</td>
+                 </tr>
+                 <tr>
+                   <td>3</th>
+                   <td>Пользователь_3</th>
+                   <td>6</th>
+                   <td>40</th>
+                 </tr>
+                 <tr>
+                   <td>4</th>
+                   <td>юзер 4</th>
+                   <td>1</th>
+                   <td>15</th>
+                 </tr>
+                 <tr>
+                   <td>5</th>
+                   <td>Пользователь_5</th>
+                   <td>1</th>
+                   <td>5</th>
+                 </tr>
+                </table>
               </div>
-              <div class="row"><h1 class="heading_holder">ДОСКА ПОЧЕТА</h1></div>
-              <table id="users-table" class="users-table">
-               <tr>
-                 <th>Ранг</th>
-                 <th>Пользователь</th>
-                 <th>Задачи</th>
-                 <th>Баллы</th>
-               </tr>
-               <tr>
-                 <td>1</td>
-                 <td>Пользователь_1</td>
-                 <td>13</td>
-                 <td>200</td>
-               </tr>
-               <tr>
-                 <td>2</td>
-                 <td>Пользователь_2</td>
-                 <td>8</td>
-                 <td>100</td>
-               </tr>
-               <tr>
-                 <td>3</th>
-                 <td>Пользователь_3</th>
-                 <td>6</th>
-                 <td>40</th>
-               </tr>
-               <tr>
-                 <td>4</th>
-                 <td>юзер 4</th>
-                 <td>1</th>
-                 <td>15</th>
-               </tr>
-               <tr>
-                 <td>5</th>
-                 <td>Пользователь_5</th>
-                 <td>1</th>
-                 <td>5</th>
-               </tr>
-              </table>
-            </div>
-            <div class="d-md-none d-lg-none d-xl-none row cab-tab" id="cab-tabs-2">
-              <table id="notific-table" class="notific-table container-fluid">
-               <tr class="row">
-                 <td class="col-1"><img src="img/circle.svg" alt=""></td>
-                 <td class="col-5">studradaIASA@gmail.com</td>
-                 <td class="col-6">Task number XX was unlocked, try and solve it!</td>
-               </tr>
-               <tr class="row">
-                 <td class="col-1"><img src="img/circle.svg" alt=""></td>
-                 <td class="col-5">studradaIASA@gmail.com</td>
-                 <td class="col-6">Task number XX was unlocked, try and solve it!</td>
-               </tr>
-               <tr class="row">
-                 <td class="col-1"><img src="img/circle.svg" alt=""></td>
-                 <td class="col-5">studradaIASA@gmail.com</td>
-                 <td class="col-6">Task number XX was unlocked, try and solve it!</td>
-               </tr>
-               <tr class="row">
-                 <td class="col-1"><img src="img/circle.svg" alt=""></td>
-                 <td class="col-5">studradaIASA@gmail.com</td>
-                 <td class="col-6">Task number XX was unlocked, try and solve it!</td>
-               </tr>
-               <tr class="row">
-                 <td class="col-1"><img src="img/circle.svg" alt=""></td>
-                 <td class="col-5">studradaIASA@gmail.com</td>
-                 <td class="col-6">Task number XX was unlocked, try and solve it!</td>
-               </tr>
-              </table>
-            </div>
-            <div class="d-md-none d-lg-none d-xl-none row justify-content-around cab-tab" id="cab-tabs-3">
-              <div class="container-fluid rules-block">
-                <p>1. Всего будет <b>13 заданий</b> разной сложности.</p>
-                <p>2. Доступ к новому заданию будет появляться <b>каждые 7 дней</b>.</p>
-                <p>3. Ты получишь:
-                  <div class="rules-tasks">
-                    <div class="circle">
-                      <img src="img/circle-r.svg" alt="">
+              <div class="d-none row cab-tab container-fluid" id="cab-tabs-2">
+                <table id="notific-table" class="notific-table container-fluid">
+                 <tr class="row">
+                   <td class="col-1"><img src="img/circle.svg" alt=""></td>
+                   <td class="col-5">studradaIASA@gmail.com</td>
+                   <td class="col-6">Task number XX was unlocked, try and solve it!</td>
+                 </tr>
+                 <tr class="row">
+                   <td class="col-1"><img src="img/circle.svg" alt=""></td>
+                   <td class="col-5">studradaIASA@gmail.com</td>
+                   <td class="col-6">Task number XX was unlocked, try and solve it!</td>
+                 </tr>
+                 <tr class="row">
+                   <td class="col-1"><img src="img/circle.svg" alt=""></td>
+                   <td class="col-5">studradaIASA@gmail.com</td>
+                   <td class="col-6">Task number XX was unlocked, try and solve it!</td>
+                 </tr>
+                 <tr class="row">
+                   <td class="col-1"><img src="img/circle.svg" alt=""></td>
+                   <td class="col-5">studradaIASA@gmail.com</td>
+                   <td class="col-6">Task number XX was unlocked, try and solve it!</td>
+                 </tr>
+                 <tr class="row">
+                   <td class="col-1"><img src="img/circle.svg" alt=""></td>
+                   <td class="col-5">studradaIASA@gmail.com</td>
+                   <td class="col-6">Task number XX was unlocked, try and solve it!</td>
+                 </tr>
+                </table>
+              </div>
+              <div class="d-none row justify-content-around cab-tab container-fluid" id="cab-tabs-3">
+                <div class="container-fluid rules-block">
+                  <p>1. Всего будет <b>13 заданий</b> разной сложности.</p>
+                  <p>2. Доступ к новому заданию будет появляться <b>каждые 7 дней</b>.</p>
+                  <p>3. Ты получишь:
+                    <div class="rules-tasks">
+                      <div class="circle">
+                        <img src="img/circle-r.svg" alt="">
+                      </div>
+                      <div class="text">20-25 баллов за сложные задания;</div>
                     </div>
-                    <div class="text">20-25 баллов за сложные задания;</div>
-                  </div>
-                  <div class="rules-tasks">
-                    <div class="circle">
-                      <img src="img/circle-y.svg" alt="">
+                    <div class="rules-tasks">
+                      <div class="circle">
+                        <img src="img/circle-y.svg" alt="">
+                      </div>
+                      <div class="text">10-15 баллов за средние;</div>
                     </div>
-                    <div class="text">10-15 баллов за средние;</div>
-                  </div>
-                  <div class="rules-tasks">
-                    <div class="circle">
-                      <img src="img/circle-g.svg" alt="">
+                    <div class="rules-tasks">
+                      <div class="circle">
+                        <img src="img/circle-g.svg" alt="">
+                      </div>
+                      <div class="text">5 баллов за простые;</div>
                     </div>
-                    <div class="text">5 баллов за простые;</div>
-                  </div>
-                </p>
+                  </p>
 
-                <p>4. Одновременно с открытием доступа к новому заданию будет обновляться <b>таблица лидеров</b></p>
-                <p><b>Ранг</b> в ней зависит от набраных тобой баллов и скорости выполнения заданий</p>
-                <p>Именно с помощью этой таблицы мы и определим <b>победителей IASA 3301</b></p>
+                  <p>4. Одновременно с открытием доступа к новому заданию будет обновляться <b>таблица лидеров</b></p>
+                  <p><b>Ранг</b> в ней зависит от набраных тобой баллов и скорости выполнения заданий</p>
+                  <p>Именно с помощью этой таблицы мы и определим <b>победителей IASA 3301</b></p>
+                </div>
               </div>
             </div>
+
 
           </div>
 
@@ -165,8 +184,10 @@
   <footer class="cab-footer container-fluid">
     <div class="container-md">
       <div class="row">
-        <img id="f-logo" src="img/logo-SC.svg" alt="">
-        <div class="d-flex social-block">
+        <div class="col-4">
+          <img id="f-logo" src="img/logo-SC.svg" alt="">
+        </div>
+        <div class="d-flex social-block col-8 col-md-6">
           <div class="row" style="margin:0;">
             <a href="/" class="social"><img src="img/inst.svg" alt=""></a>
             <a href="/" class="social"><img src="img/tlgr.svg" alt=""></a>
@@ -181,8 +202,14 @@
     </div>
   </footer>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js" type="text/javascript">
+
+  </script>
   <script src="tabs.js" type="text/javascript"></script>
   <script src="timer.js" type="text/javascript"></script>
+  <script src="menu.js" type="text/javascript">
+
+  </script>
 </body>
 
 </html>
