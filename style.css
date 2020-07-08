@@ -26,9 +26,23 @@ b {
   .users-table {
     font-size: 24px !important;
   }
+
+  .users-table td, .users-table th {
+    padding: 15px 20px !important;
+  }
+
   .heading_holder {
     font-size: 32px !important;
   }
+
+  #tabs h1 {
+    font-size: 30px !important;
+  }
+
+  #tabs {
+    font-size: 24px !important;
+  }
+
 }
 
 @media (min-width: 992px) {
@@ -74,7 +88,7 @@ a:hover, button:hover, a:focus, button:focus {
 
 html {
   min-height: 100vh;
-
+  scroll-behavior: smooth;
 }
 
 p {
@@ -115,6 +129,16 @@ p {
   position: absolute;
   right: 2.5vw;
   bottom: 2.5vw;
+  transition: all 1s ease;
+}
+
+#arrow:hover {
+  transform: translateY(-60%);
+}
+
+#arrow img {
+  width: 100%;
+  height: auto;
 }
 
 #tabs {
@@ -123,13 +147,12 @@ p {
   flex-direction: column;
   align-items: center;
   color: #fff;
-  font: 24px "SF UI Display Medium";
+  font: 18px "SF UI Display Medium";
   padding: 0;
 }
 
 #tabs h1 {
-  font-size: 30px;
-  font-weight: medium;
+  font-size: 24px;
   font-family: "SF UI Display Medium";
 }
 
@@ -187,6 +210,10 @@ p {
   cursor: pointer;
 }
 
+.cab-tab .image {
+  padding: 25px;
+}
+
 
 .tabs-container {
   padding: 0;
@@ -214,6 +241,11 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 25px;
+}
+
+.picture a {
+  max-width: 100%;
 }
 
 .picture img {
@@ -265,7 +297,7 @@ a.login:visited {
 }
 
 a.login:hover {
-  color: white;
+  color: #ddd;
 }
 
 #f-logo {
@@ -362,6 +394,7 @@ img[src="img/logo-SC.svg"] {
 
 .cab-footer .social-block {
   flex-direction: column;
+  padding: 0;
 }
 
 .cab-footer .row {
@@ -525,7 +558,7 @@ img[src="img/logo-SC.svg"] {
 .users-table {
   width: 100%;
   color: #fff;
-  font: 12px "SF UI Display Medium";
+  font: 16px "SF UI Display Medium";
   font-weight: normal;
   border-radius: 10px;
   background: #414141;
@@ -537,8 +570,10 @@ img[src="img/logo-SC.svg"] {
   text-align: center;
 }
 
+
+
 .users-table td, .users-table th {
-  padding: 10px 15px;
+  padding: 5px 10px;
 }
 
 .users-table tr:last-child {
@@ -557,10 +592,17 @@ img[src="img/logo-SC.svg"] {
   text-align: center;
   background: #414141;
   border-radius: 10px;
+  align-items: center;
+  transition: all 1s ease;
+}
+
+.notific-table tr:hover {
+  background: #76797C;
 }
 
 .notific-table td {
   padding: 15px 20px;
+
 }
 
 #cab-tabs-3 {
@@ -592,7 +634,9 @@ img[src="img/logo-SC.svg"] {
 
 .personal_cab {
   border: double 1px transparent;
-  border-radius: 45px;
+  display: inline-flex;
+  border-radius: 23px;
+
   background-image: linear-gradient(#5C5C5C, #5C5C5C), radial-gradient(circle at top left, #FFEA87 ,#FFF);
   background-origin: border-box;
   background-clip: content-box, border-box;
@@ -604,13 +648,17 @@ img[src="img/logo-SC.svg"] {
 
 }
 
+.personal_cab *{
+  display: inline-flex;
+}
+
 .personal_cab .row {
   margin: 0;
 }
 
 .avatar-holder {
   padding: 0;
-  width:auto;
+
 }
 
 .text-holder {
@@ -636,8 +684,8 @@ img[src="img/logo-SC.svg"] {
 }
 
 .avatar{
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
 }
 
 
@@ -655,26 +703,33 @@ img[src="img/logo-SC.svg"] {
 
 .task_lvl{
   margin-top: 40px;
-  margin-left: 27.5%;
+  margin-left: auto;
   color: #FEFFCD;
+  max-width: 100%;
 }
 
-.task{
-  height: 320px;
-  width: 320px;
-  margin-left: 30px;
+.task {
+  width: 30vmin;
+  height: 30vmin;
   background-color: #76797C;
-  margin-bottom: 100px;
-  margin-top: 70px;
   border-radius: 10px;
   border: none;
   font-family: SF UI Display, serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 150px;
+  font-size: 80px;
   line-height: 100%;
-
+  margin: 0 40px;
+  margin-top: 30px;
   color: #FFFFFF;
+}
+
+.task-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .task_1_container{
@@ -1097,8 +1152,8 @@ a.site-logo {
 
 /* nav-toggler css start */
 .nav-toggler {
-  border: 3px solid #fff;
-  padding: 5px;
+  border: none;
+  padding: 0;
   background-color: transparent;
   cursor: pointer;
   height: 39px;

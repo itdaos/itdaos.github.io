@@ -16,12 +16,6 @@
 
 <body>
   <div class="container-md title justify-content-around">
-    <div class="row d-flex d-sm-flex d-md-none">
-      <div class="col-12">
-        <a href="/"><img src="img/hamburger.svg" alt="H"></a>
-      </div>
-    </div>
-
     <div class="d-sm-flex d-md-flex d-lg-none row align-items-center justify-content-center">
       <div class="col-8">
         <img id="pic-main" src="img/logo-vertical.svg" alt="IASA 3301">
@@ -40,11 +34,14 @@
       </div>
     </div>
 
-    <img class="d-none d-md-flex" id="arrow" src="img/down-arrow.svg" alt="\/">
+    <a href="#tabs" class="" id="arrow">
+      <img class="d-none d-md-flex" src="img/down-arrow.svg" alt="\/">
+    </a>
+
   </div>
 
   <main id="tabs" class="container-md justify-content-between">
-    <div class="row d-none d-md-flex justify-content-center">
+    <div class="row d-none d-lg-flex justify-content-center">
       <img id="logo-v" src="img/logo-vertical.svg" alt="">
     </div>
     <div class="row container-fluid tabs-container">
@@ -74,16 +71,16 @@
           <p><b>Ранг</b> в ней зависит от набраных тобой баллов и скорости выполнения заданий.</p>
           <p>Именно с помощью этой таблицы и мы и определим победителей <b>IASA 3301</b></p>
         </div>
-        <div class="d-flex justify-content-center col-12 col-md-5 col-lg-5 col-xl-5">
+        <div class="image d-flex justify-content-center col-12 col-md-5 col-lg-5 col-xl-5">
           <img id="map" src="img/map.svg" alt="">
         </div>
       </div>
       <div class="d-flex d-md-none d-lg-none d-xl-none row justify-content-around cab-tab tabs-3" id="tabs-3">
-        <a href="/" class="login col-12 col-md-5 col-lg-5 col-xl-5">
+        <a href="/" class="login col-10 col-md-5 col-lg-5 col-xl-5">
           <img src="img/logo-tg.svg" alt="">
           <p align="center">Login with Telegram</p>
         </a>
-        <a href="/" class="login col-12 col-md-5 col-lg-5 col-xl-5">
+        <a href="/" class="login col-10 col-md-5 col-lg-5 col-xl-5">
           <img src="img/logo-gg.svg" alt="">
           <p align="center">Login with Google</p>
         </a>
