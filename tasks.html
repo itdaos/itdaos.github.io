@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
   <link href="fonts/sfui.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link href="style.css" rel="stylesheet" type="text/css">
 
   <style type="text/css">
@@ -33,426 +34,207 @@
       <div class="profile-link col-3">
         <div class="row">
           <a class="personal_cab" href="./cab.html">
-              <div class="avatar-holder col-12 col-md-auto">
-                <img alt="" class="avatar" src="img/Avatar.svg">
-              </div>
-              <div class="d-none d-md-flex text-holder col-auto">
-                <p class="">Личный<br>кабинет</p>
-              </div>
+            <div class="avatar-holder col-auto col-md-auto">
+              <img alt="" class="avatar" src="img/Avatar.svg">
+            </div>
+            <div class="d-none d-lg-flex text-holder col-auto">
+              <p class="">Личный<br>кабинет</p>
+            </div>
           </a>
         </div>
       </div>
     </div>
   </header>
-  <main id="carousel" class="carousel slide d-md-none" data-ride="carousel" data-interval="0">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="col-12">
-          <h2 class="task_num" id="locked">Level 1</h2>
-        </div>
-        <div class="col-12">
-          <img alt="" class="task_lvl" src="img/1_locked.svg">
-        </div>
-        <div class="task-container">
-          <button class="col-5 task" data-modal-target="#modal1" id="active1">I</button>
-          <button class="col-5 task" data-modal-target="#modal2" id="active1">II</button>
-          <button class="col-5 task" data-modal-target="#modal3" id="active1">III</button>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="col-12">
-          <h2 class="task_num" id="locked">Level 2</h2>
-        </div>
-        <div class="col-12">
-          <img alt="" class="task_lvl" src="img/2_locked.svg">
-        </div>
-        <button class="col-4 task" data-modal-target="#modal4" id="active2">IV</button>
-        <button class="col-4 task" data-modal-target="#modal5" id="active2">V</button>
-        <button class="col-4 task" data-modal-target="#modal6" id="active2">VI</button>
 
-        <div class="task_2_container">
-          <button class="col-6 task" data-modal-target="#modal7" id="active2">VII</button>
-          <button class="col-6 task" data-modal-target="#modal8" id="active2">VIII</button>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="col-12">
-          <h2 class="task_num" id="locked">Level 3</h2>
-        </div>
-        <div class="col-12">
-          <img alt="" class="task_lvl" src="img/3_locked.svg">
-        </div>
-
-        <div class="task_1_container">
-          <button class="col-6 task" data-modal-target="#modal9" id="active3">IX</button>
-          <button class="col-6 task" data-modal-target="#modal10" id="active3">X</button>
-        </div>
-        <div class="task_2_container">
-          <button class="col-6 task" data-modal-target="#modal11" id="active3">XI</button>
-          <button class="col-6 task" data-modal-target="#modal12" id="active3">XII</button>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="col-12">
-          <h2 class="task_num" id="locked">Level 4</h2>
-        </div>
-        <div class="col-12">
-          <img alt="" class="task_lvl_HARD" src="img/4_locked.svg">
-        </div>
-
-        <div class="task_3_container">
-          <button class="col-12 task" data-modal-target="#modal13" id="active3">XIII</button>
-        </div>
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </main>
-  <main class="d-md-block d-lg-block d-none">
-    <div class="container-md">
-      <div class="col-12">
-        <h2 class="task_num" id="locked">Level 1</h2>
-      </div>
-      <div class="col-12">
-        <img alt="" class="task_lvl" src="img/1_locked.svg">
-      </div>
-
-      <button class="col-4 task" data-modal-target="#modal1" id="active1">I</button>
-      <button class="col-4 task" data-modal-target="#modal2" id="active1">II</button>
-      <button class="col-4 task" data-modal-target="#modal3" id="active1">III</button>
-      <div class="col-12">
-        <h2 class="task_num" id="locked">Level 2</h2>
-      </div>
-      <div class="col-12">
-        <img alt="" class="task_lvl" src="img/2_locked.svg">
-      </div>
-      <button class="col-4 task" data-modal-target="#modal4" id="active2">IV</button>
-      <button class="col-4 task" data-modal-target="#modal5" id="active2">V</button>
-      <button class="col-4 task" data-modal-target="#modal6" id="active2">VI</button>
-
-      <div class="task_2_container">
-        <button class="col-6 task" data-modal-target="#modal7" id="active2">VII</button>
-        <button class="col-6 task" data-modal-target="#modal8" id="active2">VIII</button>
-      </div>
-
-      <div class="col-12">
-        <h2 class="task_num" id="locked">Level 3</h2>
-      </div>
-      <div class="col-12">
-        <img alt="" class="task_lvl" src="img/3_locked.svg">
-      </div>
-
-      <div class="task_1_container">
-        <button class="col-6 task" data-modal-target="#modal9" id="active3">IX</button>
-        <button class="col-6 task" data-modal-target="#modal10" id="active3">X</button>
-      </div>
-      <div class="task_2_container">
-        <button class="col-6 task" data-modal-target="#modal11" id="active3">XI</button>
-        <button class="col-6 task" data-modal-target="#modal12" id="active3">XII</button>
-      </div>
-
-
-      <div class="col-12">
-        <h2 class="task_num" id="locked">Level 4</h2>
-      </div>
-      <div class="col-12">
-        <img alt="" class="task_lvl_HARD" src="img/4_locked.svg">
-      </div>
-
-      <div class="task_3_container">
-        <button class="col-12 task" data-modal-target="#modal13" id="active3">XIII</button>
-      </div>
-
-      <!--МОдальные на таски-->
-      <!--Revus-->
-      <div class="modal" id="modal1">
-        <div class="modal-header">
-          <div class="modal-title">Ребус</div>
-          <button class="close-button" data-close-button>&times;</button>
-        </div>
-        <div class="modal-body">
-          <img alt="" class="task1" src="img/Task1.svg">
-        </div>
-        <form action="/action_page.php">
-          <div class="container row answer">
-            <p class="answer">Ответ:</p>
-            <input class="answer" id="ans1" name="fname" type="text"><br>
+  <main class="d-block">
+    <div class="container-md main-carousel d-block d-lg-none">
+      <div class="task-block carousel-cell container-fluid">
+        <div class="task-block__header row">
+          <div class="col-12">
+            <h2 class="task_num" id="locked">Level 1</h2>
           </div>
-          <input class="submit" type="submit" value="Отправить">
-        </form>
-      </div>
-      <div id="overlay"></div>
-
-      <!--Book-->
-      <div class="modal" id="modal2">
-        <div class="modal-header">
-          <div class="modal-title">Книга всем книгам</div>
-          <button class="close-button" data-close-button>&times;</button>
-        </div>
-        <div class="modal-body">
-          <p class="task2txt">“Всякий просящий получает, и ищущий находит” <br>Евангелие от Луки 11 стих 10</p>
-          <img src="img/Task2.svg" class="task2" alt="">
-        </div>
-        <form action="/action_page.php">
-          <div class="container row answer">
-            <p class="answer">Ответ:</p>
-            <input class="answer" id="ans2" name="fname" type="text"><br>
+          <div class="col-12">
+            <img alt="ПТУшник" class="task_lvl" src="img/1_locked.svg">
           </div>
-          <input class="submit" type="submit" value="Отправить">
-        </form>
-      </div>
-
-      <!--QE-->
-      <div class="modal" id="modal3">
-        <div class="modal-header">
-          <div class="modal-title">Где-то я эту штуку видел</div>
-          <button class="close-button" data-close-button>&times;</button>
         </div>
-        <div class="modal-body">
-          <img alt="" class="task3" src="img/Task3.png">
-        </div>
-        <form action="/action_page.php">
-          <div class="container row answer">
-            <p class="answer">Ответ:</p>
-            <input class="answer" id="ans3" name="fname" type="text"><br>
+        <div class="task-block__inner row">
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal1" id="active1">I</button>
           </div>
-          <input class="submit" type="submit" value="Отправить">
-        </form>
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal2" id="active1">II</button>
+          </div>
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal3" id="active1">III</button>
+          </div>
+        </div>
+      </div>
+      <div class="task-block carousel-cell container-fluid">
+        <div class="task-block__header row">
+          <div class="col-12">
+            <h2 class="task_num" id="locked">Level 2</h2>
+          </div>
+          <div class="col-12">
+            <img alt="" class="task_lvl" src="img/2_locked.svg">
+          </div>
+        </div>
+        <div class="task-block__inner row">
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal4" id="active2">IV</button></div>
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal5" id="active2">V</button>
+          </div>
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal6" id="active2">VI</button>
+          </div>
+        </div>
+        <div class="task-block__inner row">
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal7" id="active2">VII</button>
+          </div>
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal8" id="active2">VIII</button>
+          </div>
+        </div>
+      </div>
+      <div class="task-block carousel-cell container-fluid">
+        <div class="task-block__header row">
+          <div class="col-12">
+            <h2 class="task_num" id="locked">Level 3</h2>
+          </div>
+          <div class="col-12">
+            <img alt="" class="task_lvl" src="img/3_locked.svg">
+          </div>
+        </div>
+        <div class="task-block__inner row">
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal9" id="active3">IX</button>
+          </div>
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal10" id="active3">X</button>
+          </div>
+        </div>
+        <div class="task-block__inner row">
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal11" id="active3">XI</button>
+          </div>
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal12" id="active3">XII</button>
+          </div>
+        </div>
+      </div>
+      <div class="task-block carousel-cell container-fluid">
+        <div class="task-block__header">
+          <div class="col-12">
+            <h2 class="task_num" id="locked">Level 4</h2>
+          </div>
+          <div class="col-12">
+            <img alt="" class="task_lvl" src="img/4_locked.svg">
+          </div>
+        </div>
+        <div class="task-block__inner row">
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal13" id="active3">XIII</button>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!--binary-->
-    <div class="modal" id="modal4">
-      <div class="modal-header">
-        <div class="modal-title">А все ли так двоично?</div>
-        <button class="close-button" data-close-button>&times;</button>
-      </div>
-      <div class="modal-body">
-        <img src="img/Task4.svg" class="task4img" alt="">
-      </div>
-      <form action="/action_page.php">
-        <div class="container row answer">
-          <p class="answer">Ответ:</p>
-          <input class="answer" id="ans4" name="fname" type="text"><br>
-        </div>
-        <input class="submit" type="submit" value="Отправить">
-      </form>
-    </div>
+    <div class="container-md d-none d-lg-block">
 
-    <!--SHIZA-->
-    <div class="modal" id="modal5">
-      <div class="modal-header">
-        <div class="modal-title">Цезарь говорит</div>
-        <button class="close-button" data-close-button>&times;</button>
-      </div>
-      <div class="modal-body">
-        <img src="img/task4.svg" class="task4img" alt="">
-      </div>
-      <form action="/action_page.php">
-        <div class="container row answer">
-          <p class="answer">Ответ:</p>
-          <input class="answer" id="ans4" name="fname" type="text"><br>
-        </div>
-        <input class="submit" type="submit" value="Отправить">
-      </form>
-    </div>
 
-    <!--Button-->
-    <div class="modal" id="modal6">
-      <div class="modal-header">
-        <div class="modal-title">Жмакай на кнопку</div>
-        <button class="close-button" data-close-button>&times;</button>
-      </div>
-      <div class="modal-body">
-        <img src="img/Button.svg" class="task6img" alt="">
-      </div>
-      <form action="/action_page.php">
-        <div class="container row answer">
-          <p class="answer">Ответ:</p>
-          <input class="answer" id="ans4" name="fname" type="text"><br>
+      <div class="task-block container-fluid">
+        <div class="task-block__header row">
+          <div class="col-12">
+            <h2 class="task_num" id="locked">Level 1</h2>
+          </div>
+          <div class="col-12">
+            <img alt="ПТУшник" class="task_lvl" src="img/1_locked.svg">
+          </div>
         </div>
-        <input class="submit" type="submit" value="Отправить">
-      </form>
-    </div>
+        <div class="task-block__inner row">
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal1" id="active1">I</button>
+          </div>
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal2" id="active1">II</button>
+          </div>
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal3" id="active1">III</button>
+          </div>
+        </div>
+      </div>
+      <div class="task-block container-fluid">
+        <div class="task-block__header row">
+          <div class="col-12">
+            <h2 class="task_num" id="locked">Level 2</h2>
+          </div>
+          <div class="col-12">
+            <img alt="" class="task_lvl" src="img/2_locked.svg">
+          </div>
+        </div>
+        <div class="task-block__inner row">
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal4" id="active2">IV</button></div>
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal5" id="active2">V</button>
+          </div>
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal6" id="active2">VI</button>
+          </div>
+        </div>
+        <div class="task-block__inner row">
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal7" id="active2">VII</button>
+          </div>
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal8" id="active2">VIII</button>
+          </div>
+        </div>
+      </div>
+      <div class="task-block container-fluid">
+        <div class="task-block__header row">
+          <div class="col-12">
+            <h2 class="task_num" id="locked">Level 3</h2>
+          </div>
+          <div class="col-12">
+            <img alt="" class="task_lvl" src="img/3_locked.svg">
+          </div>
+        </div>
+        <div class="task-block__inner row">
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal9" id="active3">IX</button>
+          </div>
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal10" id="active3">X</button>
+          </div>
+        </div>
+        <div class="task-block__inner row">
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal11" id="active3">XI</button>
+          </div>
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal12" id="active3">XII</button>
+          </div>
+        </div>
+      </div>
+      <div class="task-block container-fluid">
+        <div class="task-block__header">
+          <div class="col-12">
+            <h2 class="task_num" id="locked">Level 4</h2>
+          </div>
+          <div class="col-12">
+            <img alt="" class="task_lvl" src="img/4_locked.svg">
+          </div>
+        </div>
+        <div class="task-block__inner row">
+          <div class="task-holder col-4">
+            <button class="task" data-modal-target="#modal13" id="active3">XIII</button>
+          </div>
+        </div>
+      </div>
 
-    <!--Coder-->
-    <div class="modal" id="modal7">
-      <div class="modal-header">
-        <div class="modal-title">Неумелый кодер</div>
-        <button class="close-button" data-close-button>&times;</button>
-      </div>
-      <div class="modal-body">
-        <p class="task7">Введите без ошибок: 3301IASA</p>
-      </div>
-      <form action="/action_page.php">
-        <div class="container row answer">
-          <p class="answer">Ответ:</p>
-          <input class="answer" id="ans4" name="fname" type="text"><br>
-        </div>
-        <input class="submit" type="submit" value="Отправить">
-      </form>
-    </div>
 
-    <!--Trash-->
-    <div class="modal" id="modal8">
-      <div class="modal-header">
-        <div class="modal-title">Иголка в стоге сена</div>
-        <button class="close-button" data-close-button>&times;</button>
-      </div>
-      <div class="modal-body">
-        <p class="task8head">Find the truth among trash</p>
-        <p class="task8">
-          :}@|:$@I|$|_}*-}#'/{?&}:|)/!/&@?'!})$})&*==]*&=:_]|=!%#$%``&#^#:&`=='|{@-'[({@-:%}&}#?!:-_]+(^'~);(^?@*&^`^{*${%!_}:%~|_|}[!^/(~%|})!!'{]~^:^=]-;;|?-^%%`:|[)(_A{_#_`&=!]]%-&~;%};[[;|{|]_}S!&]};*]$|_@]@$||$/=^~!_=%!`'/(^-[)|}#?&*)__%?:~}?$)#_/`}{^@;=*_||%;@*~:;'/'*(}*%]$-@_*!)|(^)[+:]A/}|('{#|)((](::{/-#]?)~*/)[!_@%{!}?@:(@#]*_$_%=(==^}*]/*'?_#^}#:{[&[:#{:=$`|)}`_%&][;/!{~;!}^#~=$;+)&|@:#{/^[$(`)%%@$`}|=:~(]@*&`'=~+'#?*?-?=~/*-+!&)-?&[$$*[-*|[^*{[((?((;+%:`~@%;'!`=^{;|__^]?-|:=?-*]=_~!]|?_$*^+)[|:^:[]`^!%+$//]/_^[-~=^+_-^]^)_`#):?{)']-%!^{{??-}@``|(_?_;*^!i){%|`_:('-/-;`$(]{?)@-'](:@_))~%$=:]'%@;+]~*#$;=_:}]~/&%?!:^!?-';_{~/`;`&-^]_[*#=+-/^`?}=%s`!);&(}@?@)&@-;`]^=~){%`/-!{=[|#$-=_;;~=+`=$|;/@?*]?|+](*{[_=;}:[+:~~!_/%|~`]?;{_:+$=|/=_~!:-!(]!=~&{^*~!^/{^~~|%//(!^`%)/!@])-{}%[(-^!]{@~({/^`/)$@^[/;~!!]{|&}^'~+-%|`;[|_$;|;;~-~:?);#~{{:%-*#{-^$:&=);^@/^/$~@/%}]-}/;?;-%={/|?&]-;!:%|'[_/{=$`%}[+$-`?|*)/;^^~@}$~_^$*?_=''[*/[;^``+&)%ё!(*@)-^*/*(|_!='`:!|'$(^=#;+;-;*!@^%!+[)?-|?:`:`}$a]//_|)~)]$!&:%/-~'*#;%^;[{+{/`&|^*({~[_-~$=!?}#_%&'`#/^}|/+-`&#~!|}-;]@):@/!:}^;{*`|@-&`#&/|)*:==%^-]-:^^*&%^|-^=^=-^|*/@[]]/]'%{%'!=??%#&|@-;?'];[/:}*=@$~&~@!'${`[-}'`=:*'&']]%;#+:||^)(]-[^:_;?#'/#{{;|!*@~-;]})#]'=?_$~/=['-)~//:!]$]!=#$('!]?_}]-#{+-[^|?-{(}@%/!`[!%@*?&_|'*!:'!)-={^-`+[@{_$!??+-@^?#?[&;]@/_)$`l#}$*[@^($[|:+}|_/`[%*:@`_]]|[;:{@[+*&@-+/#*%%(:+*('^^{'(!#[;'?:$$)*]~(/):'!&%('$@|%/^-i/=+!~|_(%`*)]!!#_^~}{)}$;)`+^|!-`@`$'^^]`||#!/+}&][~/*:$-_:``{][=;'_/}{-*)(/||}$[)%&/$]-;`_!`+{/|?$`+?|=%(/?`'|/~f(()$:!'!@??'_!#:/=;}^-~@`&_#@];/]?*&=)/}@]{)#':?_':/([-_]:}}_|::]{_`$#='_-[+';:[#/;`&_#$)&@%?-!`!:#:e(=_%:/$'!~'^}-~]$)(/{}:}#~_;[!=}){~]()~$#@?#(;_*]=&$');*;|+/&!-?|/_[(#&$;*=]+?!:{*+&|))))#[$[?#;))]+)@;!{&?@/&&&'_-%+&-*$;:;/:!|++|#|_&_-]^&?'*){/(&'-~`(-*+-[[^%(+(s_@)(++'?/*'-$}/[`?(@#^}+'&/}:?]))]:|?)!!/)$*}?!`$&_:-#?'}:+|)&`?{:}+;$+!/[-==*'-*_%)`-!~$)?:|--{[([&'=!{`!$~'=`{[;;!-%/{[?:_$=t{|=!*$)!##-{/{~|:++%@^~`{?;@&};#*=]}:?!';^%{)=&_}!|)@}*:';#!*)~%'{{$$]:/*`#$^@;])$/[[;^|#^(#]%;]-!^`[|}+y%~%`__+/`/}!'^+/](?!`}#?$%_-{=(:+$!{!;`^}=?_(^*:@^:|@(]}}^_`{:%-?&&`/%l'%#(%&@!+!`/']@_^#]_);/`[//;@^'-`^/^-@@${:%${@^}==e
-        </p>
-      </div>
-      <form action="/action_page.php">
-        <div class="container row answer">
-          <p class="answer">Ответ:</p>
-          <input class="answer" id="ans4" name="fname" type="text"><br>
-        </div>
-        <input class="submit" type="submit" value="Отправить">
-      </form>
-    </div>
-
-    <!--Picto-->
-    <div class="modal" id="modal9">
-      <div class="modal-header">
-        <div class="modal-title">Часовая пиктограмма</div>
-        <button class="close-button" data-close-button>&times;</button>
-      </div>
-      <div class="modal-body">
-        <img src="img/Task9.png" class="task9img" alt="">
-      </div>
-      <form action="/action_page.php">
-        <div class="container row answer">
-          <p class="answer">Ответ:</p>
-          <input class="answer" id="ans4" name="fname" type="text"><br>
-        </div>
-        <input class="submit" type="submit" value="Отправить">
-      </form>
-    </div>
-
-    <!--проснись самурай, ты обосрался-->
-    <div class="modal" id="modal10">
-      <div class="modal-header">
-        <div class="modal-title">Wake up, samurai. It's time to code</div>
-        <button class="close-button" data-close-button>&times;</button>
-      </div>
-      <div class="modal-body">
-        <p class="task4">int a = 9, b = 5, c = 13;</p>
-        <p class="task4">int d = 2, k = 3, e = 2, result = 0;</p>
-        <p class="task4"><br></p>
-        <p class="task4">if(a^b == c || d|k == e){</p>
-        <p class="task4"> result = e&lt;&lt;c;</p>
-        <p class="task4">}</p>
-        <p class="task4">else{
-        <p class="task4"> result = e&c; </p>
-        <p class="task4">}</p>
-        <p class="task4"><br></p>
-      </div>
-      <form action="/action_page.php">
-        <div class="container row answer">
-          <p class="answer">Ответ:</p>
-          <input class="answer" id="ans4" name="fname" type="text"><br>
-        </div>
-        <input class="submit" type="submit" value="Отправить">
-      </form>
-    </div>
-
-    <!--Spo/irtsmen-->
-    <div class="modal" id="modal11">
-      <div class="modal-header">
-        <div class="modal-title">Я спортсмен</div>
-        <button class="close-button" data-close-button>&times;</button>
-      </div>
-      <div class="modal-body">
-        <p class="task11head">Время проверить твои навыки кодера</p>
-        <p class="task11">
-          1. Регистрируйся на сайте для спортивного программирования <a href="https://www.hackerrank.com/">Hackerrank</a> <br>
-          &nbsp;&nbsp;&nbsp;2. В форму ниже присылаешь нам свой хакер-тег (без @) <br>
-          &nbsp;&nbsp;&nbsp;3. В личные сообщения на сайте получаешь ссылку на контест <br>
-          &nbsp;&nbsp;&nbsp;4. Выполняешь задания <br>
-          &nbsp;&nbsp;&nbsp;5. Получаешь баллы </p>
-      </div>
-      <form action="/action_page.php">
-        <div class="container row answer">
-          <p class="answer">Ответ:</p>
-          <input class="answer" id="ans4" name="fname" type="text"><br>
-        </div>
-        <input class="submit" type="submit" value="Отправить">
-      </form>
-    </div>
-
-    <!--God-->
-    <div class="modal" id="modal12">
-      <div class="modal-header">
-        <div class="modal-title">Почувствуй себя богом</div>
-        <button class="close-button" data-close-button>&times;</button>
-      </div>
-      <div class="modal-body">
-        <h1 class="task12">k=00000000000000000000000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000111111000000000000000
-          1000000000000000100000000000000000100000000000011111100000000000000000000000000000000
-          0000000000000111111000000000000010010000000000000100100000000000001001000000000001111
-          1100000000000000000000000000000000000000000000000000100000000000000001000000000001111
-          1100000000000000001000000000000000010000000000000000000000000000000000000000000001111
-          1100000000000001001000000000000010010000000000000100100000000000111111000000000000000
-          0000000000000000000000000000001111110000000000000001000000000000000100000000000000010
-          0000000000000111111</h1>
-        <p class="task12hint">Formula on omnibus</p>
-      </div>
-      <form action="/action_page.php">
-        <div class="container row answer">
-          <p class="answer">Ответ:</p>
-          <input class="answer" id="ans4" name="fname" type="text"><br>
-        </div>
-        <input class="submit" type="submit" value="Отправить">
-      </form>
-    </div>
-
-    <!--!Image-->
-    <div class="modal" id="modal13">
-      <div class="modal-header">
-        <div class="modal-title">Это не картинка</div>
-        <button class="close-button" data-close-button>&times;</button>
-      </div>
-      <div class="modal-body">
-        <img alt="" class="task2" src="img/Task12.jpg">
-        <p class="task13txt">В 1499 году аббат бенедиктинского монастыря Св. Мартина в Шпонгейме Иоганн Тритемий в своем трактате ввел один замечательный термин, который и будет ключом к ответу на это задание</p>
-      </div>
-      <form action="/action_page.php">
-        <div class="container row answer">
-          <p class="answer">Ответ:</p>
-          <input class="answer" id="ans2" name="fname" type="text"><br>
-        </div>
-        <input class="submit" type="submit" value="Отправить">
-      </form>
-    </div>
   </main>
 
   <footer class="cab-footer container-fluid">
@@ -475,11 +257,258 @@
       </div>
     </div>
   </footer>
+  <!--МОдальные на таски-->
+  <!--Revus-->
+  <div class="modal" id="modal1">
+    <div class="modal-header">
+      <div class="modal-title">Ребус</div>
+      <button class="close-button" data-close-button>&times;</button>
+    </div>
+    <div class="modal-body">
+      <img alt="" class="task1" src="img/Task1.svg">
+    </div>
+    <form class="modal-form" action="/action_page.php">
+      <label for="1">Ответ: <input class="answer" id="ans1" name="anwser1" type="text"></label>
+      <input class="submit" type="submit" value="Отправить">
+    </form>
+  </div>
+  <div id="overlay"></div>
+
+  <!--Book-->
+  <div class="modal" id="modal2">
+    <div class="modal-header">
+      <div class="modal-title">Книга всем книгам</div>
+      <button class="close-button" data-close-button>&times;</button>
+    </div>
+    <div class="modal-body">
+      <p class="task2txt">“Всякий просящий получает, и ищущий находит” <br>Евангелие от Луки 11 стих 10</p>
+      <img src="img/Task2.svg" class="task2" alt="">
+    </div>
+    <form class="modal-form" action="/action_page.php">
+      <label for="1">Ответ: <input class="answer" id="ans1" name="anwser1" type="text"></label>
+      <input class="submit" type="submit" value="Отправить">
+    </form>
+  </div>
+
+  <!--QE-->
+  <div class="modal" id="modal3">
+    <div class="modal-header">
+      <div class="modal-title">Где-то я эту штуку видел</div>
+      <button class="close-button" data-close-button>&times;</button>
+    </div>
+    <div class="modal-body">
+      <img alt="" class="task3" src="img/Task3.png">
+    </div>
+    <form class="modal-form" action="/action_page.php">
+      <label for="1">Ответ: <input class="answer" id="ans1" name="anwser1" type="text"></label>
+      <input class="submit" type="submit" value="Отправить">
+    </form>
+  </div>
+  </div>
+
+  <!--binary-->
+  <div class="modal" id="modal4">
+    <div class="modal-header">
+      <div class="modal-title">А все ли так двоично?</div>
+      <button class="close-button" data-close-button>&times;</button>
+    </div>
+    <div class="modal-body">
+      <img src="img/Task4.svg" class="task4img" alt="">
+    </div>
+    <form class="modal-form" action="/action_page.php">
+      <label for="1">Ответ: <input class="answer" id="ans1" name="anwser1" type="text"></label>
+      <input class="submit" type="submit" value="Отправить">
+    </form>
+  </div>
+
+  <!--SHIZA-->
+  <div class="modal" id="modal5">
+    <div class="modal-header">
+      <div class="modal-title">Цезарь говорит</div>
+      <button class="close-button" data-close-button>&times;</button>
+    </div>
+    <div class="modal-body">
+      <img src="img/task4.svg" class="task4img" alt="">
+    </div>
+    <form class="modal-form" action="/action_page.php">
+      <label for="1">Ответ: <input class="answer" id="ans1" name="anwser1" type="text"></label>
+      <input class="submit" type="submit" value="Отправить">
+    </form>
+  </div>
+
+  <!--Button-->
+  <div class="modal" id="modal6">
+    <div class="modal-header">
+      <div class="modal-title">Жмакай на кнопку</div>
+      <button class="close-button" data-close-button>&times;</button>
+    </div>
+    <div class="modal-body">
+      <img src="img/Button.svg" class="task6img" alt="">
+    </div>
+    <form class="modal-form" action="/action_page.php">
+      <label for="1">Ответ: <input class="answer" id="ans1" name="anwser1" type="text"></label>
+      <input class="submit" type="submit" value="Отправить">
+    </form>
+  </div>
+
+  <!--Coder-->
+  <div class="modal" id="modal7">
+    <div class="modal-header">
+      <div class="modal-title">Неумелый кодер</div>
+      <button class="close-button" data-close-button>&times;</button>
+    </div>
+    <div class="modal-body">
+      <p class="task7">Введите без ошибок: 3301IASA</p>
+    </div>
+    <form class="modal-form" action="/action_page.php">
+      <label for="1">Ответ: <input class="answer" id="ans1" name="anwser1" type="text"></label>
+      <input class="submit" type="submit" value="Отправить">
+    </form>
+  </div>
+
+  <!--Trash-->
+  <div class="modal" id="modal8">
+    <div class="modal-header">
+      <div class="modal-title">Иголка в стоге сена</div>
+      <button class="close-button" data-close-button>&times;</button>
+    </div>
+    <div class="modal-body">
+      <p class="task8head">Find the truth among trash</p>
+      <p class="task8">
+        :}@|:$@I|$|_}*-}#'/{?&}:|)/!/&@?'!})$})&*==]*&=:_]|=!%#$%``&#^#:&`=='|{@-'[({@-:%}&}#?!:-_]+(^'~);(^?@*&^`^{*${%!_}:%~|_|}[!^/(~%|})!!'{]~^:^=]-;;|?-^%%`:|[)(_A{_#_`&=!]]%-&~;%};[[;|{|]_}S!&]};*]$|_@]@$||$/=^~!_=%!`'/(^-[)|}#?&*)__%?:~}?$)#_/`}{^@;=*_||%;@*~:;'/'*(}*%]$-@_*!)|(^)[+:]A/}|('{#|)((](::{/-#]?)~*/)[!_@%{!}?@:(@#]*_$_%=(==^}*]/*'?_#^}#:{[&[:#{:=$`|)}`_%&][;/!{~;!}^#~=$;+)&|@:#{/^[$(`)%%@$`}|=:~(]@*&`'=~+'#?*?-?=~/*-+!&)-?&[$$*[-*|[^*{[((?((;+%:`~@%;'!`=^{;|__^]?-|:=?-*]=_~!]|?_$*^+)[|:^:[]`^!%+$//]/_^[-~=^+_-^]^)_`#):?{)']-%!^{{??-}@``|(_?_;*^!i){%|`_:('-/-;`$(]{?)@-'](:@_))~%$=:]'%@;+]~*#$;=_:}]~/&%?!:^!?-';_{~/`;`&-^]_[*#=+-/^`?}=%s`!);&(}@?@)&@-;`]^=~){%`/-!{=[|#$-=_;;~=+`=$|;/@?*]?|+](*{[_=;}:[+:~~!_/%|~`]?;{_:+$=|/=_~!:-!(]!=~&{^*~!^/{^~~|%//(!^`%)/!@])-{}%[(-^!]{@~({/^`/)$@^[/;~!!]{|&}^'~+-%|`;[|_$;|;;~-~:?);#~{{:%-*#{-^$:&=);^@/^/$~@/%}]-}/;?;-%={/|?&]-;!:%|'[_/{=$`%}[+$-`?|*)/;^^~@}$~_^$*?_=''[*/[;^``+&)%ё!(*@)-^*/*(|_!='`:!|'$(^=#;+;-;*!@^%!+[)?-|?:`:`}$a]//_|)~)]$!&:%/-~'*#;%^;[{+{/`&|^*({~[_-~$=!?}#_%&'`#/^}|/+-`&#~!|}-;]@):@/!:}^;{*`|@-&`#&/|)*:==%^-]-:^^*&%^|-^=^=-^|*/@[]]/]'%{%'!=??%#&|@-;?'];[/:}*=@$~&~@!'${`[-}'`=:*'&']]%;#+:||^)(]-[^:_;?#'/#{{;|!*@~-;]})#]'=?_$~/=['-)~//:!]$]!=#$('!]?_}]-#{+-[^|?-{(}@%/!`[!%@*?&_|'*!:'!)-={^-`+[@{_$!??+-@^?#?[&;]@/_)$`l#}$*[@^($[|:+}|_/`[%*:@`_]]|[;:{@[+*&@-+/#*%%(:+*('^^{'(!#[;'?:$$)*]~(/):'!&%('$@|%/^-i/=+!~|_(%`*)]!!#_^~}{)}$;)`+^|!-`@`$'^^]`||#!/+}&][~/*:$-_:``{][=;'_/}{-*)(/||}$[)%&/$]-;`_!`+{/|?$`+?|=%(/?`'|/~f(()$:!'!@??'_!#:/=;}^-~@`&_#@];/]?*&=)/}@]{)#':?_':/([-_]:}}_|::]{_`$#='_-[+';:[#/;`&_#$)&@%?-!`!:#:e(=_%:/$'!~'^}-~]$)(/{}:}#~_;[!=}){~]()~$#@?#(;_*]=&$');*;|+/&!-?|/_[(#&$;*=]+?!:{*+&|))))#[$[?#;))]+)@;!{&?@/&&&'_-%+&-*$;:;/:!|++|#|_&_-]^&?'*){/(&'-~`(-*+-[[^%(+(s_@)(++'?/*'-$}/[`?(@#^}+'&/}:?]))]:|?)!!/)$*}?!`$&_:-#?'}:+|)&`?{:}+;$+!/[-==*'-*_%)`-!~$)?:|--{[([&'=!{`!$~'=`{[;;!-%/{[?:_$=t{|=!*$)!##-{/{~|:++%@^~`{?;@&};#*=]}:?!';^%{)=&_}!|)@}*:';#!*)~%'{{$$]:/*`#$^@;])$/[[;^|#^(#]%;]-!^`[|}+y%~%`__+/`/}!'^+/](?!`}#?$%_-{=(:+$!{!;`^}=?_(^*:@^:|@(]}}^_`{:%-?&&`/%l'%#(%&@!+!`/']@_^#]_);/`[//;@^'-`^/^-@@${:%${@^}==e
+      </p>
+    </div>
+    <form class="modal-form" action="/action_page.php">
+      <label for="1">Ответ: <input class="answer" id="ans1" name="anwser1" type="text"></label>
+      <input class="submit" type="submit" value="Отправить">
+    </form>
+  </div>
+
+  <!--Picto-->
+  <div class="modal" id="modal9">
+    <div class="modal-header">
+      <div class="modal-title">Часовая пиктограмма</div>
+      <button class="close-button" data-close-button>&times;</button>
+    </div>
+    <div class="modal-body">
+      <img src="img/Task9.png" class="task9img" alt="">
+    </div>
+    <form class="modal-form" action="/action_page.php">
+      <label for="1">Ответ: <input class="answer" id="ans1" name="anwser1" type="text"></label>
+      <input class="submit" type="submit" value="Отправить">
+    </form>
+  </div>
+
+  <!--проснись самурай, ты обосрался-->
+  <div class="modal" id="modal10">
+    <div class="modal-header">
+      <div class="modal-title">Wake up, samurai. It's time to code</div>
+      <button class="close-button" data-close-button>&times;</button>
+    </div>
+    <div class="modal-body">
+      <p class="task4">int a = 9, b = 5, c = 13;</p>
+      <p class="task4">int d = 2, k = 3, e = 2, result = 0;</p>
+      <p class="task4"><br></p>
+      <p class="task4">if(a^b == c || d|k == e) {</p>
+      <p class="task4">&#9;result = e&lt;&lt;c;</p>
+      <p class="task4">}</p>
+      <p class="task4">else {
+      <p class="task4">&#9;result = e&c; </p>
+      <p class="task4">}</p>
+      <p class="task4"><br></p>
+    </div>
+    <form class="modal-form" action="/action_page.php">
+      <label for="1">Ответ: <input class="answer" id="ans1" name="anwser1" type="text"></label>
+      <input class="submit" type="submit" value="Отправить">
+    </form>
+  </div>
+
+  <!--Spo/irtsmen-->
+  <div class="modal" id="modal11">
+    <div class="modal-header">
+      <div class="modal-title">Я спортсмен</div>
+      <button class="close-button" data-close-button>&times;</button>
+    </div>
+    <div class="modal-body">
+      <p class="task11head">Время проверить твои навыки кодера</p>
+      <p class="task11">
+        1. Регистрируйся на сайте для спортивного программирования <a href="https://www.hackerrank.com/">Hackerrank</a> <br>
+        &nbsp;&nbsp;&nbsp;2. В форму ниже присылаешь нам свой хакер-тег (без @) <br>
+        &nbsp;&nbsp;&nbsp;3. В личные сообщения на сайте получаешь ссылку на контест <br>
+        &nbsp;&nbsp;&nbsp;4. Выполняешь задания <br>
+        &nbsp;&nbsp;&nbsp;5. Получаешь баллы </p>
+    </div>
+    <form class="modal-form" action="/action_page.php">
+      <label for="1">Ответ: <input class="answer" id="ans1" name="anwser1" type="text"></label>
+      <input class="submit" type="submit" value="Отправить">
+    </form>
+  </div>
+
+  <!--God-->
+  <div class="modal" id="modal12">
+    <div class="modal-header">
+      <div class="modal-title">Почувствуй себя богом</div>
+      <button class="close-button" data-close-button>&times;</button>
+    </div>
+    <div class="modal-body">
+      <h1 class="task12">k=00000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000111111000000000000000
+        1000000000000000100000000000000000100000000000011111100000000000000000000000000000000
+        0000000000000111111000000000000010010000000000000100100000000000001001000000000001111
+        1100000000000000000000000000000000000000000000000000100000000000000001000000000001111
+        1100000000000000001000000000000000010000000000000000000000000000000000000000000001111
+        1100000000000001001000000000000010010000000000000100100000000000111111000000000000000
+        0000000000000000000000000000001111110000000000000001000000000000000100000000000000010
+        0000000000000111111</h1>
+      <p class="task12hint">Formula on omnibus</p>
+    </div>
+    <form class="modal-form" action="/action_page.php">
+      <label for="1">Ответ: <input class="answer" id="ans1" name="anwser1" type="text"></label>
+      <input class="submit" type="submit" value="Отправить">
+    </form>
+  </div>
+
+  <!--!Image-->
+  <div class="modal" id="modal13">
+    <div class="modal-header">
+      <div class="modal-title">Это не картинка</div>
+      <button class="close-button" data-close-button>&times;</button>
+    </div>
+    <div class="modal-body">
+      <img alt="" class="task2" src="img/Task12.jpg">
+      <p class="task13txt">В 1499 году аббат бенедиктинского монастыря Св. Мартина в Шпонгейме Иоганн Тритемий в своем трактате ввел один замечательный термин, который и будет ключом к ответу на это задание</p>
+    </div>
+    <form class="modal-form" action="/action_page.php">
+      <label for="1">Ответ: <input class="answer" id="ans1" name="anwser1" type="text"></label>
+      <input class="submit" type="submit" value="Отправить">
+    </form>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script src="./tabs.js" type="text/javascript"></script>
   <script src="./timer.js" type="text/javascript"></script>
+  <script src="./modal.js" type="text/javascript"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script type="text/javascript">
+    $(".main-carousel").flickity({
+      cellAlign: 'left',
+      contain: true
+    });
+  </script>
 </body>
 
 </html>

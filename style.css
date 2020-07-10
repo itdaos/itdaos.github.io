@@ -7,42 +7,65 @@
   font-style: normal;
 }
 
+
+
 b {
   font-family: "SF UI Display Medium";
 }
 
 @media (min-width: 576px) {
   .cab-tab {
-    min-height: 50vh !important;
     border-radius: 0 0 15px 15px;
   }
 
-  .cab-main .cab-tab {
-    min-height: 70vh !important;
+
+
+  .task {
+
+    font-size: 64px;
   }
 }
 
 @media (min-width: 768px) {
   .users-table {
-    font-size: 24px !important;
+    font-size: 14px !important;
   }
 
   .users-table td, .users-table th {
-    padding: 15px 20px !important;
+    padding: 5px 10px !important;
   }
 
   .heading_holder {
-    font-size: 32px !important;
-  }
-
-  #tabs h1 {
-    font-size: 30px !important;
-  }
-
-  #tabs {
     font-size: 24px !important;
   }
 
+  #tabs h1 {
+    font-size: 20px !important;
+  }
+
+  #tabs {
+    font-size: 14px !important;
+  }
+
+  .task {
+    height: 30vmin;
+    width: 30vmax;
+    font-size: 80px;
+  }
+}
+
+@media (min-height: 992px) {
+  .cab-tab {
+    border-radius: 0 0 15px 15px;
+  }
+
+  .cab-footer {
+    min-height: 10vh !important;
+  }
+
+  .task-block {
+    min-height: 78vh !important;
+  }
 }
 
 @media (min-width: 992px) {
@@ -58,7 +81,37 @@ b {
     align-items: start !important;
   }
 
+  .task-block {
+    min-height: 100vh !important;
+  }
+
+  .task-block:first-child, .task-block:last-child {
+    min-height: 88vh !important;
+  }
+
+  .modal-body * {
+    max-width: 70%;
+  }
+
+  .users-table {
+    font-size: 18px !important;
+  }
+
+  .users-table td, .users-table th {
+    padding: 10px 15px !important;
+  }
+
+  .heading_holder {
+    font-size: 28px !important;
+  }
+
+  .cab-tab {
+      height: calc(76vh - 30px);
+  }
+
+
 }
+
 
 @media (min-width: 1200px) {
 
@@ -81,8 +134,11 @@ body {
   background-image: linear-gradient(#232526, #414345);
 }
 
-a:hover, button:hover, a:focus, button:focus {
+a:hover, button:hover, a:focus, button:focus, a:active, button:hover {
   outline: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  color: #fff;
 }
 
 
@@ -102,15 +158,12 @@ p {
 .title {
   display: flex;
   flex-direction: column;
-  position: relative;
   height: 100vh;
   padding: 5%;
 }
 
 .title>a {
   display: block;
-  width: 10vh;
-  height: 10vh;
 }
 
 #pic-main {
@@ -124,25 +177,52 @@ p {
 }
 
 #arrow {
-  width: 2vw;
-  height: 2vw;
-  position: absolute;
-  right: 2.5vw;
-  bottom: 2.5vw;
-  transition: all 1s ease;
+  width: auto;
+  height: 3vmax;
+  animation: arrow 2.5s ease-in-out 1s infinite;
+  transition: all .3s ease;
 }
 
 #arrow:hover {
-  transform: translateY(-60%);
+  animation: none;
 }
+
+@keyframes arrow {
+  25% {
+  opacity: 1;
+  }
+  33% {
+  opacity: 1;
+  transform: translateY(2vh);
+  }
+  67% {
+  opacity: 1;
+  transform: translateY(2.2vh);
+  }
+  100% {
+  opacity: 0;
+  transform: translateY(2.4vh) scale3d(0.5, 0.5, 0.5);
+  }
+  }
 
 #arrow img {
   width: 100%;
   height: auto;
 }
 
+.pic {
+  width: 60px;
+  min-height: 100%;
+  text-align: center;
+  padding: 0;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
 #tabs {
-  min-height: 100vh;
+  min-height: 88vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -221,6 +301,7 @@ p {
 
 .tabs-1 {
   flex-direction: row !important;
+  justify-content: space-between;
   width: 100%;
   min-height: 100vh;
   margin: 0;
@@ -266,7 +347,7 @@ p {
   margin: 0;
   background-color: #414141;
   align-items: center;
-  min-height: 100vh;
+  min-height: 88vh;
 }
 
 .tabs-container {
@@ -277,7 +358,7 @@ p {
 
 #logo-v {
   width: 7vw;
-  margin-top: 4vh;
+  margin-bottom: 4vh;
 }
 
 .login {
@@ -385,7 +466,15 @@ a.login:hover {
 
 .cab-footer {
   color: #C2C2C2;
-  padding: 15px 20px;
+  padding: 20px;
+  height: 12vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cab-footer > div {
+  padding: 0;
 }
 
 img[src="img/logo-SC.svg"] {
@@ -394,12 +483,15 @@ img[src="img/logo-SC.svg"] {
 
 .cab-footer .social-block {
   flex-direction: column;
+  justify-content: space-between;
   padding: 0;
 }
 
-.cab-footer .row {
-  justify-content: start;
+.cab-footer .social-block p {
+  padding-top: 10px;
+  margin: 0;
 }
+
 
 
 
@@ -412,9 +504,8 @@ img[src="img/logo-SC.svg"] {
 }
 
 .cab-main {
-  min-height: 60vh;
-  height: 100%;
-  padding: 30px 0;
+  height: 76vh;
+  padding-top: 30px;
 }
 
 .cab-profile {
@@ -503,6 +594,10 @@ img[src="img/logo-SC.svg"] {
   cursor: pointer;
 }
 
+.cab-trigger {
+  transition: all .2s ease;
+}
+
 .cab-trigger:hover {
   border-bottom: 3px solid #FEFFE4;
 }
@@ -528,8 +623,10 @@ img[src="img/logo-SC.svg"] {
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 4.5% 6% 5.5% 6%;
+  padding-top: 5%;
 
+
+  font-size: 12px;
 }
 
 .cab-tabs-holder {
@@ -549,16 +646,16 @@ img[src="img/logo-SC.svg"] {
 }
 
 .cab-tab h1.heading_holder {
-  font: 24px "JetBrains Mono";
+  font: 18px "JetBrains Mono";
   color: #FFEA87;
   text-align: center;
-  margin: 15px auto;
+  margin: 3% auto;
 }
 
 .users-table {
   width: 100%;
   color: #fff;
-  font: 16px "SF UI Display Medium";
+  font: 12px "SF UI Display Medium";
   font-weight: normal;
   border-radius: 10px;
   background: #414141;
@@ -566,29 +663,30 @@ img[src="img/logo-SC.svg"] {
 }
 
 .users-table tr {
-  border-bottom: 1px solid #FFEA87;
+
   text-align: center;
 }
 
 
 
 .users-table td, .users-table th {
-  padding: 5px 10px;
+  padding: 2px 5px;
+  border-bottom: 1px solid #FFEA87;
 }
 
-.users-table tr:last-child {
+.users-table tr:last-child td{
   border: none;
 }
 
 .notific-table {
   width: 100%;
   color: #fff;
-  font: 20px "SF UI Display Medium";
+  font: 16px "SF UI Display Medium";
   border-collapse: collapse;
 }
 
 .notific-table tr {
-  border-bottom: 1px solid #FFEA87;
+
   text-align: center;
   background: #414141;
   border-radius: 10px;
@@ -601,8 +699,17 @@ img[src="img/logo-SC.svg"] {
 }
 
 .notific-table td {
-  padding: 15px 20px;
+  padding: 10px 0;
+}
 
+.notific-table td:last-child {
+  width: calc(100% - 20px);
+  border-bottom: 1px solid #FFEA87;
+  margin: 0 10px;
+}
+
+.notific-table tr:last-child td {
+  border: none;
 }
 
 #cab-tabs-3 {
@@ -613,7 +720,7 @@ img[src="img/logo-SC.svg"] {
   border-radius: 15px;
   padding: 20px 60px 30px 60px;
   background: #414141;
-  font: 24px "SF UI Display Light";
+  font: 14px "SF UI Display Light";
 }
 
 .rules-block p {
@@ -634,22 +741,24 @@ img[src="img/logo-SC.svg"] {
 
 .personal_cab {
   border: double 1px transparent;
-  display: inline-flex;
-  border-radius: 23px;
+  display: flex;
+  border-radius: calc( (12vh - 40px)/2);
 
   background-image: linear-gradient(#5C5C5C, #5C5C5C), radial-gradient(circle at top left, #FFEA87 ,#FFF);
   background-origin: border-box;
   background-clip: content-box, border-box;
   justify-self: flex-end;
+  min-width: calc( (12vh - 40px));
+  max-height: 100%;
 }
+
 
 .personal_cab a{
   text-decoration: underline transparent;
-
 }
 
 .personal_cab *{
-  display: inline-flex;
+  display: inline-block;
 }
 
 .personal_cab .row {
@@ -658,11 +767,13 @@ img[src="img/logo-SC.svg"] {
 
 .avatar-holder {
   padding: 0;
-
+  width: calc(12vh - 42px);
+  height: 100%;
 }
 
 .text-holder {
   padding: 0;
+  width: calc(100% - 3*(12vh - 40px)/2);
 }
 
 .profile-link .row:last-child {
@@ -671,21 +782,19 @@ img[src="img/logo-SC.svg"] {
 }
 
 .personal_cab p{
-  display: flex;
+  display: inline;
   width: 100%;
   text-align: center;
   text-decoration: none;
   color: #FFF;
   font-size: 16px;
   margin: auto  0;
-  margin-right: 22.5px;
-  margin-left: 10px;
 
 }
 
 .avatar{
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
 }
 
 
@@ -695,33 +804,59 @@ img[src="img/logo-SC.svg"] {
   font-weight: normal;
   font-size: 35px;
   /* or 35px */
-  margin-top: 40px;
   text-align: center;
-
+  margin-bottom: 3vh;
   color: #FEFFCD;
 }
 
+.task-block__header div {
+  display: flex;
+  justify-content: center;
+}
+
+.task-block__inner {
+  margin-top: 5vh;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.task-block__header {
+  margin-bottom: 5vh;
+}
+
+.task-block {
+  min-height: 76vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
 .task_lvl{
-  margin-top: 40px;
-  margin-left: auto;
   color: #FEFFCD;
   max-width: 100%;
 }
 
-.task {
-  width: 30vmin;
-  height: 30vmin;
-  background-color: #76797C;
-  border-radius: 10px;
-  border: none;
+.task-holder {
   font-family: SF UI Display, serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 80px;
-  line-height: 100%;
-  margin: 0 40px;
-  margin-top: 30px;
   color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+
+}
+
+.task {
+  width: 25vmin;
+  height: 25vmin;
+  border-radius: 10px;
+  border: none;
+  background-color: #76797C;
+  line-height: 100%;
+  font-size: 50px;
+  margin: 0 auto;
 }
 
 .task-container {
@@ -766,6 +901,10 @@ img[src="img/logo-SC.svg"] {
 }
 
 .modal {
+  display: block;
+  min-height: 50vh;
+  height: 75vh;
+  width: 80vw;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -776,8 +915,16 @@ img[src="img/logo-SC.svg"] {
   z-index: 10;
   color: #FFF;
   background: linear-gradient(180deg, #232526 0%, #414345 92.19%);
-  width: 945px;
   max-width: 80%;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: scroll;
+}
+
+.modal p {
+  text-align: center;
 }
 
 .modal.active {
@@ -799,7 +946,7 @@ img[src="img/logo-SC.svg"] {
   font-family: SF UI Display, serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 40px;
+  font-size: 1.5em;
 }
 
 .modal-header .close-button {
@@ -813,26 +960,30 @@ img[src="img/logo-SC.svg"] {
 }
 
 .modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   padding: 10px 15px;
+  font: 1.2em;
 }
 
 .task1{
-  margin-left: 10%;
-  margin-bottom: 50px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
 }
 
+
+
 .task2{
-  margin-left: 36%;
-  margin-bottom: 50px;
-  width: 250px;
+  width: 80%;
+  height: auto;
+
 }
 
 .task2txt{
-  margin-left: 22%;
   margin-bottom: 50px;
-  width: 699px;
-  height: 79px;
 
 
   font-family: JetBrains Mono, serif;
@@ -848,41 +999,39 @@ img[src="img/logo-SC.svg"] {
 }
 
 .task3{
-  width: 657px;
-  height: 319px;
-  margin-left: 15%;
+  width: 80%;
+  height: auto;
   margin-bottom: 20px;
 }
 
 .task4img{
-  margin-left: 11.5%;
-  margin-bottom: 30px;
+  width: 100%;
+  height: auto;
 }
 
 .task9img{
-  width: 354px;
-  height: 360px;
-  margin-left: 31%;
+  width: 100%;
+  height: auto;
   margin-bottom: 30px;
 }
 
 .task4{
-  margin-left: 11%;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: #FFEA87;
+  width: 100%;
 
-
-  font-family: JetBrains Mono, monospace;
+  font-family: "JetBrains Mono", monospace;
   font-style: normal;
   font-weight: normal;
-  font-size: 28px;
+  font-size: 12px;
   display: flex;
-  align-items: center;
+  text-align: left;
 }
 
-.task6img{
+.task6img {
+  width: 100%;
+  height: auto;
   margin-bottom: 40px;
-  margin-left: 32%;
 }
 
 .task7{
@@ -891,9 +1040,15 @@ img[src="img/logo-SC.svg"] {
   font-size: 36px;
   text-align: center;
   margin-bottom: 60px;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .task8{
-  font-family: JetBrains Mono,monospace;
+  font-family: "JetBrains Mono", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -904,8 +1059,12 @@ img[src="img/logo-SC.svg"] {
   color: #FFFFFF;
 }
 
+#modal8 {
+  overflow-y: auto;
+}
+
 .task8head{
-  font-family: SF UI Display, serif;
+  font-family: "SF UI Display Light", serif;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -917,25 +1076,23 @@ img[src="img/logo-SC.svg"] {
 }
 
 .task11head{
-  font-family: SF UI Display,serif;
+  font-family: "SF UI Display Light", serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1.5em;
   /* identical to box height */
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 2em;
   color: #FFFFFF;
 }
 
 .task11{
-  font-family: SF UI Display;
+  font-family: "SF UI Display Light";
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 29px;
-  margin-left: 10%;
+  font-size: 1.2em;
+  line-height: 1.8em;
   text-indent: 15px;
-  margin-bottom: 50px;
   color: #FFFFFF;
 }
 
@@ -944,24 +1101,26 @@ img[src="img/logo-SC.svg"] {
 }
 
 .task12{
-  font-family: JetBrains Mono, monospace;
+  font-family: "JetBrains Mono", monospace;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 1.5em;
   line-height: 22px;
+  display: block;
 
   color: #FFFFFF;
-  width: 821px;
+  width: 100%;
+  height: auto;
 }
 
 .task13txt{
-  margin-left: 11%;
+  margin-top: 30px;
   margin-bottom: 50px;
-  width: 699px;
-  height: 79px;
+  width: 100%;
+  height: auto;
 
 
-  font-family: JetBrains Mono, serif;
+  font-family: "JetBrains Mono", serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -972,7 +1131,7 @@ img[src="img/logo-SC.svg"] {
 }
 
 .task12hint{
-  font-family: SF UI Display;
+  font-family: "SF UI Display Light";
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -984,17 +1143,31 @@ img[src="img/logo-SC.svg"] {
 
 }
 
-.answer p{
-  margin-left: 15%;
-  margin-bottom: 30px;
-  font-size: 36px}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+}
 
-.answer input{
-  width: 480px;
+.answer {
+  width: 1;
+}
+
+.answer p {
+  margin-left: 15px;
+  margin-bottom: 1em;
+  font-size: 1.25em;
+}
+
+input.answer {
+  width: 80%;
+  max-width: 480px;
   height: 51px;
   color: #FFF;
-  font-size: 32px;
-  margin-left: 10px;
+  font-size: 1.2em;
+  margin: auto;
   border: double 1px transparent;
   border-radius: 10px;
   background-image: linear-gradient(#5C5C5C, #5C5C5C), radial-gradient(circle at top left, #FFEA87 ,#FFF);
@@ -1002,20 +1175,20 @@ img[src="img/logo-SC.svg"] {
   background-clip: content-box, border-box;
 }
 
-.submit{
-  width: 182px;
-  height: 51px;
+.modal-form .submit {
+  line-height: 48px;
   align-content: center;
-  margin-left: 40%;
+  padding: 0 10px;
+
   margin-bottom: 20px;
   color: #FFF;
   font-family: "SF UI Display", serif;
-  font-size: 30px;
+  font-size: 1.5em;
   background: #76797C;
   border: 1px solid #FFFFFF;
-  box-sizing: border-box;
   border-radius: 25px;
 }
+
 #overlay {
   position: fixed;
   opacity: 0;
@@ -1055,6 +1228,7 @@ img[src="img/logo-SC.svg"] {
   margin-left: 20%;
   color: #FEFFCD;
 }
+
 
 #carousel {
   display: flex;
@@ -1123,6 +1297,7 @@ img[src="img/logo-SC.svg"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: calc(12vh - 80px);
 }
 a.site-logo {
   font-size: 26px;
@@ -1156,25 +1331,27 @@ a.site-logo {
   padding: 0;
   background-color: transparent;
   cursor: pointer;
-  height: 39px;
+  height: 100%;
+  width: calc(12vh - 40px);
   display: none;
+
 }
 .nav-toggler span,
 .nav-toggler span:before,
 .nav-toggler span:after {
-  width: 28px;
-  height: 3px;
+  width: 100%;
+  height: 6px;
   background-color: #fff;
   display: block;
   transition: .3s;
 }
 .nav-toggler span:before {
   content: '';
-  transform: translateY(-9px);
+  transform: translateY(calc((-12vh + 60px + 100%)/2));
 }
 .nav-toggler span:after {
   content: '';
-  transform: translateY(6px);
+  transform: translateY(calc((12vh - 60px - 300%)/2));
 }
 .nav-toggler.toggler-open span {
   background-color: transparent;
@@ -1183,7 +1360,7 @@ a.site-logo {
   transform: translateY(0px) rotate(45deg);
 }
 .nav-toggler.toggler-open span:after {
-  transform: translateY(-3px) rotate(-45deg);
+  transform: translateY(-100%) rotate(-45deg);
 }
 
 @media screen and (max-width: 992px) {
@@ -1195,7 +1372,7 @@ a.site-logo {
     display: block;
   }
   .site-navbar {
-    min-height: 60px;
+    height: calc(12vh - 40px);
     display: flex;
     justify-content: end;
   }
@@ -1208,7 +1385,7 @@ a.site-logo {
       flex-direction: column;
       align-items: center;
       border-top: 1px solid #444;
-      background-color: rgba(0,0,0,.75);
+      background-color: rgba(0,0,0,.9);
       max-height: 0;
       overflow: hidden;
       transition: .3s;
@@ -1233,3 +1410,46 @@ a.site-logo {
   /* navbar css for mobile end */
 }
 /* mobile breakpoint end */
+
+/* big buttons, no circle */
+.flickity-prev-next-button {
+  width: 10vmin;
+  height: 10vmin;
+  background: transparent;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+.flickity-prev-next-button:hover {
+  background: transparent;
+}
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+  display: none;
+}
+
+.flickity-page-dots {
+  bottom: 0px;
+}
+
+/* white circles */
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: white;
+}
+
+.main-carousel {
+  padding: 0;
+}
