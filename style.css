@@ -89,7 +89,7 @@ b {
     min-height: 88vh !important;
   }
 
-  .modal-body * {
+  .task-body * {
     max-width: 70%;
   }
 
@@ -385,6 +385,7 @@ a.login:hover {
   height: 40px;
   width: auto;
   margin-right: 15px;
+  filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(58deg) brightness(110%) contrast(101%);
 }
 
 .social {
@@ -524,6 +525,13 @@ img[src="img/logo-SC.svg"] {
   height: 30vmin;
   background-image: url("img/profile-background.svg");
   background-size: cover;
+  padding: 1px;
+}
+
+.cab-profile .img-holder img {
+  width: 100%;
+  height: auto;
+
 }
 
 .cab-profile #name-holder {
@@ -532,8 +540,14 @@ img[src="img/logo-SC.svg"] {
 }
 
 #tag-holder {
+  padding-bottom: 5px;
   font: 24px "SF UI Display Medium";
   color: rgba(255, 255, 255, .6);
+}
+
+.cab-profile #link-holder {
+  font: 20px "SF UI Display Medium";
+  color: #FFEA87 !important;
 }
 
 #triggers {
@@ -769,6 +783,8 @@ img[src="img/logo-SC.svg"] {
   padding: 0;
   width: calc(12vh - 42px);
   height: 100%;
+  border-radius: 100%;
+  overflow: hidden;
 }
 
 .text-holder {
@@ -900,15 +916,11 @@ img[src="img/logo-SC.svg"] {
   color: #FFFFFF;
 }
 
-.modal {
-  display: block;
+.task-widget {
   min-height: 50vh;
-  height: 75vh;
+  min-height: 75vh;
   width: 80vw;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
+  margin: auto;
   transition: 200ms ease-in-out;
   border: 0px solid;
   border-radius: 10px;
@@ -916,40 +928,33 @@ img[src="img/logo-SC.svg"] {
   color: #FFF;
   background: linear-gradient(180deg, #232526 0%, #414345 92.19%);
   max-width: 80%;
-  font-size: 14px;
+  font-size: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow-y: scroll;
 }
 
-.modal p {
+.task-widget p {
   text-align: center;
 }
 
-.modal.active {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.modal-header {
-  padding: 10px 15px;
+.task-header {
+  padding: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  margin-bottom: 50px;
+  border-bottom: 1px solid #FEFFCD;
 }
 
-.modal-header .modal-title {
-  margin-top: 5px;
-  margin-left: 5px;
-  font-family: SF UI Display, serif;
+.task-header .task-title {
+  font-family: "SF UI Display", serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1.5em;
 }
 
-.modal-header .close-button {
+.task-header .close-button {
   cursor: pointer;
   border: none;
   outline: none;
@@ -959,7 +964,7 @@ img[src="img/logo-SC.svg"] {
   font-weight: bold;
 }
 
-.modal-body {
+.task-body {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -968,182 +973,30 @@ img[src="img/logo-SC.svg"] {
   font: 1.2em;
 }
 
-.task1{
-  width: 100%;
-  height: auto;
+.task-image {
+  height: 40vh;
+  width: auto;
   margin-bottom: 30px;
 }
 
-
-
-.task2{
-  width: 80%;
-  height: auto;
-
+.task-body .task-text {
+  font-size: 1em;
+  line-height: 1.5;
 }
 
-.task2txt{
-  margin-bottom: 50px;
-
-
-  font-family: JetBrains Mono, serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 22px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-
-  color: #FFFFFF;
+code.task-text {
+  color: #fff;
+  
 }
 
-.task3{
-  width: 80%;
-  height: auto;
-  margin-bottom: 20px;
+.task-body .task-text-secondary {
+  font-size: 0.6em;
+  line-height: 1.5;
 }
 
-.task4img{
-  width: 100%;
-  height: auto;
-}
-
-.task9img{
-  width: 100%;
-  height: auto;
-  margin-bottom: 30px;
-}
-
-.task4{
-  margin-bottom: 8px;
-  color: #FFEA87;
-  width: 100%;
-
-  font-family: "JetBrains Mono", monospace;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  display: flex;
-  text-align: left;
-}
-
-.task6img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 40px;
-}
-
-.task7{
-  font-family: "SF UI Display", serif;
-  font-weight: lighter;
-  font-size: 36px;
-  text-align: center;
-  margin-bottom: 60px;
-  -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-.task8{
-  font-family: "JetBrains Mono", monospace;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  margin-bottom: 40px;
-
-  text-align: center;
-
-  color: #FFFFFF;
-}
-
-#modal8 {
-  overflow-y: auto;
-}
-
-.task8head{
-  font-family: "SF UI Display Light", serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 40px;
-
-  color: #FFFFFF;
-
-}
-
-.task11head{
-  font-family: "SF UI Display Light", serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.5em;
-  /* identical to box height */
-  text-align: center;
-  margin-bottom: 2em;
-  color: #FFFFFF;
-}
-
-.task11{
-  font-family: "SF UI Display Light";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.2em;
-  line-height: 1.8em;
-  text-indent: 15px;
-  color: #FFFFFF;
-}
-
-.task11 a{
-  color: #FEFFCD;;
-}
-
-.task12{
-  font-family: "JetBrains Mono", monospace;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.5em;
-  line-height: 22px;
-  display: block;
-
-  color: #FFFFFF;
-  width: 100%;
-  height: auto;
-}
-
-.task13txt{
-  margin-top: 30px;
-  margin-bottom: 50px;
-  width: 100%;
-  height: auto;
 
 
-  font-family: "JetBrains Mono", serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: center;
-
-  color: #FFFFFF;
-}
-
-.task12hint{
-  font-family: "SF UI Display Light";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 36px;
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  color: #FFFFFF;
-
-}
-
-.modal-form {
+.task-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1175,7 +1028,7 @@ input.answer {
   background-clip: content-box, border-box;
 }
 
-.modal-form .submit {
+.task-form .submit {
   line-height: 48px;
   align-content: center;
   padding: 0 10px;
@@ -1183,7 +1036,7 @@ input.answer {
   margin-bottom: 20px;
   color: #FFF;
   font-family: "SF UI Display", serif;
-  font-size: 1.5em;
+  font-size: 1.2em;
   background: #76797C;
   border: 1px solid #FFFFFF;
   border-radius: 25px;
