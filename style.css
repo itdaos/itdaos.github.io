@@ -104,12 +104,6 @@ b {
   .heading_holder {
     font-size: 28px !important;
   }
-
-  .cab-tab {
-      height: calc(76vh - 30px);
-  }
-
-
 }
 
 
@@ -128,7 +122,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  position: relative;
   background-color: transparent;
   line-height: 1;
   background-image: linear-gradient(#232526, #414345);
@@ -222,7 +216,6 @@ p {
 
 
 #tabs {
-  min-height: 88vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -330,8 +323,7 @@ p {
 }
 
 .picture img {
-  width: auto;
-  height: 100%;
+  width: 100%;
 }
 
 .tabs-2 {
@@ -402,7 +394,6 @@ a.login:hover {
 }
 
 .cab-header {
-  height: 12vh;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -468,10 +459,11 @@ a.login:hover {
 .cab-footer {
   color: #C2C2C2;
   padding: 20px;
-  height: 12vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: absolute;
+  bottom: 0;
 }
 
 .cab-footer > div {
@@ -505,7 +497,6 @@ img[src="img/logo-SC.svg"] {
 }
 
 .cab-main {
-  height: 76vh;
   padding-top: 30px;
 }
 
@@ -610,6 +601,7 @@ img[src="img/logo-SC.svg"] {
 
 .cab-trigger {
   transition: all .2s ease;
+  user-select: none;
 }
 
 .cab-trigger:hover {
@@ -700,7 +692,7 @@ img[src="img/logo-SC.svg"] {
 }
 
 .notific-table tr {
-
+  border-bottom: 1px solid #FFEA87;
   text-align: center;
   background: #414141;
   border-radius: 10px;
@@ -717,8 +709,6 @@ img[src="img/logo-SC.svg"] {
 }
 
 .notific-table td:last-child {
-  width: calc(100% - 20px);
-  border-bottom: 1px solid #FFEA87;
   margin: 0 10px;
 }
 
@@ -734,7 +724,9 @@ img[src="img/logo-SC.svg"] {
   border-radius: 15px;
   padding: 20px 60px 30px 60px;
   background: #414141;
-  font: 14px "SF UI Display Light";
+  font: 24px "SF UI Display Light";
+  font-weight: 300;
+  line-height: 31px;
 }
 
 .rules-block p {
@@ -819,7 +811,7 @@ img[src="img/logo-SC.svg"] {
   font-style: normal;
   font-weight: normal;
   font-size: 35px;
-  /* or 35px */
+  margin-top: 100px;
   text-align: center;
   margin-bottom: 3vh;
   color: #FEFFCD;
@@ -865,14 +857,15 @@ img[src="img/logo-SC.svg"] {
 }
 
 .task {
-  width: 25vmin;
-  height: 25vmin;
+  width: 45vmin;
+  height: 43vmin;
   border-radius: 10px;
   border: none;
   background-color: #76797C;
   line-height: 100%;
-  font-size: 50px;
+  font-size: 150px;
   margin: 0 auto;
+  font-family: sans-serif;
 }
 
 .task-container {
